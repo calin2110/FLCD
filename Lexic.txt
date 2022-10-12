@@ -1,0 +1,37 @@
+alphabet:
+    a. upper and lowercase characters A-Z and a-z
+    b. underline '_'
+    c. digits 0-9
+    
+lexic:
+    a. special symbols:
+        - operators: + - * / % += -= *= /= > >= < <= = == && ||
+        - separators: ( ) { } : ; [ ] space
+        - reserved words: fun, void, int, read, def, final, unless, else, write, until, forenum, foreach, in
+    b. identifiers
+        sequence of letters, digits and underlines such that first character is letter of underline
+        
+        <letter> ::= a|...|z|A|...|Z
+        <digit> ::= 0|...|9
+        <underline> ::= _
+        <character> ::= <letter>|<digit>|<underline>
+        <identifier> ::= <letter>|<underline>|<identifier><character>
+        
+    c. constants
+        1. integer: 
+        
+            <nonzero_digit> ::= 1|...|9
+            <digit> ::= 0|<nonzero_digit>
+            <unsigned_integer> ::= <nonzero_digit>|<unsigned_integer><digit>
+            <sign> ::= +|-
+            <integer> ::= 0|<sign><unsigned_integer>|<unsigned_integer>
+           
+        2. boolean
+            
+            <boolean> ::= true|false
+            
+        3. string
+            
+            <special_character> ::= ~|!|@|#|$|%|^|&|*|(|)|{|}|[|]|:|;|<|>|,|.|?|/|\|-
+            <string_character> ::= <letter>|<digit>|<special_character>|<underline>
+            <string> ::= ""|<string_character><string>
