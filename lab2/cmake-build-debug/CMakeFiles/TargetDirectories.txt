@@ -1,0 +1,3 @@
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir
