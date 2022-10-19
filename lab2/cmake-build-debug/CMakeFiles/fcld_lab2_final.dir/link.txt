@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/fcld_lab2_final.dir/main.cpp.o CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o  -o fcld_lab2_final 
