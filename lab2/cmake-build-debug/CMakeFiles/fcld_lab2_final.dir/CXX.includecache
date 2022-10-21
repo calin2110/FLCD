@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.cpp
+SymbolTable.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.h
+stdexcept
+-
+string
+-
+iostream
+-
+
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.h
+any
+-
+
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/main.cpp
+iostream
+-
+SymbolTable.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.h
+
