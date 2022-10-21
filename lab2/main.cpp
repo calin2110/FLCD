@@ -2,7 +2,7 @@
 #include "SymbolTable.h"
 
 int main() {
-    SymbolTable st = SymbolTable();
+    SymbolTable st = SymbolTable(3, 0.75);
     st.add("calin");
     st.add("calin");
     st.add("cbkin");
