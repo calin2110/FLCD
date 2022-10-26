@@ -123,6 +123,87 @@ fcld_lab2_final/fast:
 	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/build
 .PHONY : fcld_lab2_final/fast
 
+HashTable.o: HashTable.cpp.o
+
+.PHONY : HashTable.o
+
+# target to build an object file
+HashTable.cpp.o:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.o
+.PHONY : HashTable.cpp.o
+
+HashTable.i: HashTable.cpp.i
+
+.PHONY : HashTable.i
+
+# target to preprocess a source file
+HashTable.cpp.i:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.i
+.PHONY : HashTable.cpp.i
+
+HashTable.s: HashTable.cpp.s
+
+.PHONY : HashTable.s
+
+# target to generate assembly for a file
+HashTable.cpp.s:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.s
+.PHONY : HashTable.cpp.s
+
+PIF.o: PIF.cpp.o
+
+.PHONY : PIF.o
+
+# target to build an object file
+PIF.cpp.o:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o
+.PHONY : PIF.cpp.o
+
+PIF.i: PIF.cpp.i
+
+.PHONY : PIF.i
+
+# target to preprocess a source file
+PIF.cpp.i:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/PIF.cpp.i
+.PHONY : PIF.cpp.i
+
+PIF.s: PIF.cpp.s
+
+.PHONY : PIF.s
+
+# target to generate assembly for a file
+PIF.cpp.s:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/PIF.cpp.s
+.PHONY : PIF.cpp.s
+
+Scanner.o: Scanner.cpp.o
+
+.PHONY : Scanner.o
+
+# target to build an object file
+Scanner.cpp.o:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o
+.PHONY : Scanner.cpp.o
+
+Scanner.i: Scanner.cpp.i
+
+.PHONY : Scanner.i
+
+# target to preprocess a source file
+Scanner.cpp.i:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.i
+.PHONY : Scanner.cpp.i
+
+Scanner.s: Scanner.cpp.s
+
+.PHONY : Scanner.s
+
+# target to generate assembly for a file
+Scanner.cpp.s:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.s
+.PHONY : Scanner.cpp.s
+
 SymbolTable.o: SymbolTable.cpp.o
 
 .PHONY : SymbolTable.o
@@ -149,6 +230,33 @@ SymbolTable.s: SymbolTable.cpp.s
 SymbolTable.cpp.s:
 	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.s
 .PHONY : SymbolTable.cpp.s
+
+Token.o: Token.cpp.o
+
+.PHONY : Token.o
+
+# target to build an object file
+Token.cpp.o:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/Token.cpp.o
+.PHONY : Token.cpp.o
+
+Token.i: Token.cpp.i
+
+.PHONY : Token.i
+
+# target to preprocess a source file
+Token.cpp.i:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/Token.cpp.i
+.PHONY : Token.cpp.i
+
+Token.s: Token.cpp.s
+
+.PHONY : Token.s
+
+# target to generate assembly for a file
+Token.cpp.s:
+	$(MAKE) -f CMakeFiles/fcld_lab2_final.dir/build.make CMakeFiles/fcld_lab2_final.dir/Token.cpp.s
+.PHONY : Token.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +294,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fcld_lab2_final"
+	@echo "... HashTable.o"
+	@echo "... HashTable.i"
+	@echo "... HashTable.s"
+	@echo "... PIF.o"
+	@echo "... PIF.i"
+	@echo "... PIF.s"
+	@echo "... Scanner.o"
+	@echo "... Scanner.i"
+	@echo "... Scanner.s"
 	@echo "... SymbolTable.o"
 	@echo "... SymbolTable.i"
 	@echo "... SymbolTable.s"
+	@echo "... Token.o"
+	@echo "... Token.i"
+	@echo "... Token.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

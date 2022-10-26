@@ -32,6 +32,6 @@ lexic:
             
         3. string
             
-            <special_character> ::= ~|!|@|#|$|%|^|&|*|(|)|{|}|[|]|:|;|<|>|,|.|?|/|\|-
+            <special_character> ::= ~|!|@|#|$|^|,|.|?|_
             <string_character> ::= <letter>|<digit>|<special_character>|<underline>
             <string> ::= ""|<string_character><string>

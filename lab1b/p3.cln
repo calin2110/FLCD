@@ -15,5 +15,5 @@ fun main(): void {
         sum += i;
     }
     
-    print(sum);
+    write(sum);
 }

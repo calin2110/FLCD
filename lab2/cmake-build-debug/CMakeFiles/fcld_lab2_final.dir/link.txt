@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/fcld_lab2_final.dir/main.cpp.o CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o  -o fcld_lab2_final 
+/usr/bin/c++  -g   CMakeFiles/fcld_lab2_final.dir/main.cpp.o CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.o CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o CMakeFiles/fcld_lab2_final.dir/Token.cpp.o CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o  -o fcld_lab2_final 

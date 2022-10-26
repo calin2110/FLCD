@@ -70,9 +70,61 @@ CMakeFiles/fcld_lab2_final.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/main.cpp -o CMakeFiles/fcld_lab2_final.dir/main.cpp.s
 
+CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.o: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.o: ../HashTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.o -c /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.cpp
+
+CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.cpp > CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.i
+
+CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.cpp -o CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.s
+
+CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o: ../Scanner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o -c /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.cpp
+
+CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.cpp > CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.i
+
+CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.cpp -o CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.s
+
+CMakeFiles/fcld_lab2_final.dir/Token.cpp.o: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/Token.cpp.o: ../Token.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fcld_lab2_final.dir/Token.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fcld_lab2_final.dir/Token.cpp.o -c /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.cpp
+
+CMakeFiles/fcld_lab2_final.dir/Token.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fcld_lab2_final.dir/Token.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.cpp > CMakeFiles/fcld_lab2_final.dir/Token.cpp.i
+
+CMakeFiles/fcld_lab2_final.dir/Token.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/Token.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.cpp -o CMakeFiles/fcld_lab2_final.dir/Token.cpp.s
+
+CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o: ../PIF.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o -c /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/PIF.cpp
+
+CMakeFiles/fcld_lab2_final.dir/PIF.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fcld_lab2_final.dir/PIF.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/PIF.cpp > CMakeFiles/fcld_lab2_final.dir/PIF.cpp.i
+
+CMakeFiles/fcld_lab2_final.dir/PIF.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/PIF.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/PIF.cpp -o CMakeFiles/fcld_lab2_final.dir/PIF.cpp.s
+
 CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o: CMakeFiles/fcld_lab2_final.dir/flags.make
 CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o: ../SymbolTable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o -c /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.cpp
 
 CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.i: cmake_force
@@ -86,16 +138,24 @@ CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.s: cmake_force
 # Object files for target fcld_lab2_final
 fcld_lab2_final_OBJECTS = \
 "CMakeFiles/fcld_lab2_final.dir/main.cpp.o" \
+"CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.o" \
+"CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o" \
+"CMakeFiles/fcld_lab2_final.dir/Token.cpp.o" \
+"CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o" \
 "CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o"
 
 # External object files for target fcld_lab2_final
 fcld_lab2_final_EXTERNAL_OBJECTS =
 
 fcld_lab2_final: CMakeFiles/fcld_lab2_final.dir/main.cpp.o
+fcld_lab2_final: CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.o
+fcld_lab2_final: CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o
+fcld_lab2_final: CMakeFiles/fcld_lab2_final.dir/Token.cpp.o
+fcld_lab2_final: CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o
 fcld_lab2_final: CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o
 fcld_lab2_final: CMakeFiles/fcld_lab2_final.dir/build.make
 fcld_lab2_final: CMakeFiles/fcld_lab2_final.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable fcld_lab2_final"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable fcld_lab2_final"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fcld_lab2_final.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

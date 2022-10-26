@@ -6,23 +6,51 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.cpp
-SymbolTable.h
-/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.h
-stdexcept
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.h
+any
+-
+fstream
+-
+
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/PIF.h
+list
+-
+fstream
+-
+Token.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.h
+
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.h
+unordered_set
 -
 string
 -
-iostream
+HashTable.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.h
+Token.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.h
+PIF.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/PIF.h
+SymbolTable.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.h
+list
 -
 
 /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.h
-any
+HashTable.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.h
+fstream
+-
+
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.h
+string
 -
 
 /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/main.cpp
 iostream
 -
-SymbolTable.h
-/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.h
+HashTable.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.h
+Scanner.h
+/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.h
 

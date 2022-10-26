@@ -82,10 +82,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.cpp">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/PIF.cpp">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/PIF.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.cpp">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.cpp">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.cpp">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/main.cpp">
