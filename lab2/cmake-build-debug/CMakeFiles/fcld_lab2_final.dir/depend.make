@@ -9,6 +9,7 @@ CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o: ../PIF.h
 CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o: ../Token.h
 
 CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o: ../HashTable.h
+CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o: ../LexicalException.h
 CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o: ../PIF.h
 CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o: ../Scanner.cpp
 CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o: ../Scanner.h
@@ -23,6 +24,7 @@ CMakeFiles/fcld_lab2_final.dir/Token.cpp.o: ../Token.cpp
 CMakeFiles/fcld_lab2_final.dir/Token.cpp.o: ../Token.h
 
 CMakeFiles/fcld_lab2_final.dir/main.cpp.o: ../HashTable.h
+CMakeFiles/fcld_lab2_final.dir/main.cpp.o: ../LexicalException.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.o: ../PIF.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.o: ../Scanner.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.o: ../SymbolTable.h

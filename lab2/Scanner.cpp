@@ -3,6 +3,7 @@
 //
 
 #include "Scanner.h"
+#include "LexicalException.h"
 #include <iostream>
 #include <regex>
 
@@ -89,8 +90,7 @@ TokenType Scanner::classify_token(const std::string &token) {
     if (is_token_string_constant(token)) {
         return STRING_CONSTANT;
     }
-    // TODO: change exception
-    throw std::exception();
+    throw LexicalException("Token " + token + " cannot be classified!");
 }
 
 void Scanner::classify_all_tokens(const std::list<std::string> &tokens) {

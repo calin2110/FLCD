@@ -1,10 +1,17 @@
 #include <iostream>
 #include "HashTable.h"
 #include "Scanner.h"
+#include "LexicalException.h"
 
 int main() {
     Scanner scanner{};
-    scanner.scan("token.in", "p3.cln");
-    scanner.write_pif_and_symbol_table("pif.out", "st.out");
+    try {
+        scanner.scan("token.in", "../programs/p1err.cln");
+        scanner.write_pif_and_symbol_table("pif2.out", "st2.out");
+        std::cout << "Lexically correct\n";
+    } catch (LexicalException& lexicalException) {
+        std::cout << "Lexical error\n";
+        std::cout << lexicalException.what() << "\n";
+    }
     return 0;
 }

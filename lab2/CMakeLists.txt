@@ -15,4 +15,5 @@ add_executable(fcld_lab2_final
         PIF.h
         SymbolTable.cpp
         SymbolTable.h
+        LexicalException.h
 )

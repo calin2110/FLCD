@@ -88,6 +88,9 @@
 		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/LexicalException.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/PIF.cpp">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
