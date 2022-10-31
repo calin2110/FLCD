@@ -12,7 +12,7 @@ private:
     HashTable table;
 
 public:
-    SymbolTable() = default;
+    SymbolTable();
     int add(const std::any& symbol);
     friend std::ostream &operator<<(std::ostream &os, SymbolTable& object);
 };

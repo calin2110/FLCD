@@ -17,15 +17,15 @@ std::unordered_set<std::string> Scanner::get_reserved_words(const std::string &f
     return res_words;
 }
 
-void Scanner::scan(const std::string &filepath) {
-    std::list<std::string> tokens = get_tokens(filepath);
+void Scanner::scan(const std::string& reserved_words_filepath,
+                   const std::string& code_filepath) {
+    reserved_words = get_reserved_words(reserved_words_filepath);
+    std::list<std::string> tokens = get_tokens(code_filepath);
     classify_all_tokens(tokens);
 }
 
-Scanner::Scanner(const std::string &reserved_words_filepath) {
-    reserved_words = get_reserved_words(reserved_words_filepath);
-    symbolTable = SymbolTable();
-    pif = PIF();
+Scanner::Scanner(): symbolTable(), pif() {
+
 }
 
 std::list<std::string> Scanner::get_tokens(const std::string &filepath) {
@@ -43,6 +43,8 @@ std::list<std::string> Scanner::get_tokens(const std::string &filepath) {
         int i = 0, start = 0;
         while (i < word.size()) {
             char current_char = word[i];
+            // if current_char is a separator => add word until this char to tokens and then add current_char or
+            // current group of chars, depending on what it is
             if (separators.find(current_char) != separators.end()) {
                 if (start != i) {
                     std::string current_word = word.substr(start, i - start);
@@ -67,6 +69,7 @@ std::list<std::string> Scanner::get_tokens(const std::string &filepath) {
             tokens.push_back(current_word);
         }
     }
+    file.close();
     return tokens;
 }
 

@@ -41,7 +41,14 @@ public:
      * @param quotient:         int representing the max capacity of the hash table
      * @param max_load_factor:  double representing the max load factor allowed by the hash table
      */
-    HashTable(int quotient = 647, double max_load_factor = 0.75);
+    explicit HashTable(int quotient = 647, double max_load_factor = 0.75);
+
+    /*
+     * Given a hash table, we want to assign it to the current hash table correctly
+     * so that both can be destructed without any memory errors
+     * (this is actually needed in order to not have any memory leaks)
+     */
+    HashTable& operator=(const HashTable& other);
 
     /*
      * Given a symbol, which is either a std::string, int or bool condensed into an std::any,
@@ -67,6 +74,10 @@ public:
      */
     [[nodiscard]] Node* search(const std::any& symbol) const;
 
+    /*
+     * Given a hashtable, we want to output it to the ostream given
+     * This is used to print the HashTable nicer to the file after using the scanning algorithm
+     */
     friend std::ostream &operator<<(std::ostream &os, HashTable& hashTable);
 
     /*
@@ -82,6 +93,11 @@ private:
      * @param symbol:   std::any representing the symbol we are trying to hash
      * @return:         depending on the type of symbol, we apply a different hash function
      *                  which returns an unsigned int value between [0, quotient - 1]
+     *                  value is a std::string => hash value will be the remainder of the sum of the ascii codes
+     *                                            of all characters of the std::string when divided by quotient
+     *                  value is a boolean => hash value will be 0 if the value is false or 1 otherwise
+     *                  value is an int => hash value will be the value of the remainder when dividing
+     *                                     the int by quotient
      * @throws:         std::invalid_argument if the type of the symbol is neither int, bool or std::string
      */
     [[nodiscard]] unsigned int hash(const std::any& symbol) const;

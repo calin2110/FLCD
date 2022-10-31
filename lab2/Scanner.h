@@ -19,10 +19,11 @@ private:
 
 public:
     std::unordered_set<std::string> get_reserved_words(const std::string& filepath);
-    void scan(const std::string& filepath);
+    void scan(const std::string& reserved_words_filepath,
+              const std::string& code_filepath);
     void write_pif_and_symbol_table(const std::string& pif_filepath,
                                const std::string& st_filepath);
-    explicit Scanner(const std::string &reserved_words_filepath);
+    Scanner();
 
 private:
     std::list<std::string> get_tokens(const std::string &filepath);

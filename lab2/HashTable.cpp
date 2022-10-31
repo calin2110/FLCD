@@ -5,6 +5,7 @@
 #include "HashTable.h"
 #include <stdexcept>
 #include <string>
+#include <iostream>
 
 HashTable::HashTable(int quotient, double max_load_factor) {
     this->quotient = quotient;
@@ -66,15 +67,15 @@ unsigned int HashTable::hash(const std::any &symbol) const {
 }
 
 HashTable::~HashTable() {
-//    for (int i = 0; i < quotient; i++) {
-//        Node *current_node = this->hash_table[i];
-//        while (current_node != nullptr) {
-//            Node *next_node = current_node->next;
-//            delete current_node;
-//            current_node = next_node;
-//        }
-//    }
-//    delete[] hash_table;
+    for (int i = 0; i < quotient; i++) {
+        Node *current_node = this->hash_table[i];
+        while (current_node != nullptr) {
+            Node *next_node = current_node->next;
+            delete current_node;
+            current_node = next_node;
+        }
+    }
+    delete[] hash_table;
 }
 
 void HashTable::resize() {
@@ -124,6 +125,60 @@ std::ostream &operator<<(std::ostream &os, HashTable &hashTable) {
         }
     }
     return os;
+}
+
+//HashTable::HashTable(HashTable &table) {
+//    this->quotient = table.quotient;
+//    this->current_position = table.current_position;
+//    this->size = table.size;
+//    this->max_load_factor = table.max_load_factor;
+//    this->initialise_hash_table();
+//    for (int i = 0; i < table.quotient; i++) {
+//        Node* current_node = table.hash_table[i];
+//        Node* previous_node = nullptr;
+//        while (current_node != nullptr) {
+//            Node* created_node = new Node;
+//            if (previous_node != nullptr) {
+//                previous_node->next = created_node;
+//            } else {
+//                hash_table[i] = created_node;
+//            }
+//            created_node->next = nullptr;
+//            created_node->symbol = current_node->symbol;
+//            created_node->position = current_node->position;
+//            previous_node = created_node;
+//            current_node = current_node->next;
+//        }
+//    }
+//}
+
+HashTable &HashTable::operator=(const HashTable &table) {
+    if (&table == this) {
+        return *this;
+    }
+    this->quotient = table.quotient;
+    this->current_position = table.current_position;
+    this->size = table.size;
+    this->max_load_factor = table.max_load_factor;
+    this->initialise_hash_table();
+    for (int i = 0; i < table.quotient; i++) {
+        Node* current_node = table.hash_table[i];
+        Node* previous_node = nullptr;
+        while (current_node != nullptr) {
+            Node* created_node = new Node;
+            if (previous_node != nullptr) {
+                previous_node->next = created_node;
+            } else {
+                hash_table[i] = created_node;
+            }
+            created_node->next = nullptr;
+            created_node->symbol = current_node->symbol;
+            created_node->position = current_node->position;
+            previous_node = created_node;
+            current_node = current_node->next;
+        }
+    }
+    return *this;
 }
 
 bool symbols_are_equal(const std::any &symbol1, const std::any &symbol2) {

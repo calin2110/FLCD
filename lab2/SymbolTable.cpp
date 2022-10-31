@@ -12,3 +12,7 @@ std::ostream &operator<<(std::ostream &os, SymbolTable &symbolTable) {
     os << symbolTable.table;
     return os;
 }
+
+SymbolTable::SymbolTable(): table(647, 0.75) {
+
+}
