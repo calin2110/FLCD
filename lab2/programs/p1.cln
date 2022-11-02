@@ -7,7 +7,7 @@ fun main(): void {
     read(c);
     
     final max: int;
-    unless (a > b) {
+    unless (a >= b) {
         unless (b > c) {
             max = c;
         } else {

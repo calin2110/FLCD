@@ -6,8 +6,12 @@
 int main() {
     Scanner scanner{};
     try {
-        scanner.scan("token.in", "../programs/p2.cln");
-        scanner.write_pif_and_symbol_table("pif2.out", "st2.out");
+        std::string filename_noext = "p1err";
+        scanner.scan("token.in", "../programs/" + filename_noext + ".cln");
+        scanner.write_pif_and_symbol_table(
+                "../output/pif/pif_" + filename_noext + ".out",
+                "../output/st/st_" + filename_noext + ".out"
+                );
         std::cout << "Lexically correct\n";
     } catch (LexicalException& lexicalException) {
         std::cout << "Lexical error\n";
