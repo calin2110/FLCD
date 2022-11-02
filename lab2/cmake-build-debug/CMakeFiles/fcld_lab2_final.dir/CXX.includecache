@@ -22,16 +22,6 @@ fstream
 Token.h
 /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.h
 
-/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.cpp
-Scanner.h
-/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.h
-LexicalException.h
-/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/LexicalException.h
-iostream
--
-regex
--
-
 /mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.h
 unordered_set
 -
