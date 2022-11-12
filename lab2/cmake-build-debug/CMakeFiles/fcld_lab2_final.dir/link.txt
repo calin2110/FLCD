@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\fcld_lab2_final.dir/objects.a
-C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\ar.exe cr CMakeFiles\fcld_lab2_final.dir/objects.a @CMakeFiles\fcld_lab2_final.dir\objects1.rsp
-C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\fcld_lab2_final.dir/objects.a -Wl,--no-whole-archive  -o fcld_lab2_final.exe -Wl,--out-implib,libfcld_lab2_final.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\fcld_lab2_final.dir\linklibs.rsp
