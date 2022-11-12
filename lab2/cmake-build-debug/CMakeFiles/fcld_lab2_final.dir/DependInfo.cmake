@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/HashTable.cpp" "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/HashTable.cpp.o"
-  "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/PIF.cpp" "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/PIF.cpp.o"
-  "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Scanner.cpp" "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/Scanner.cpp.o"
-  "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/SymbolTable.cpp" "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/SymbolTable.cpp.o"
-  "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/Token.cpp" "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/Token.cpp.o"
-  "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/main.cpp" "/mnt/c/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/main.cpp.o"
+  "C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/implementation/HashTable.cpp" "C:/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/HashTable.cpp.obj"
+  "C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/implementation/PIF.cpp" "C:/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/PIF.cpp.obj"
+  "C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/implementation/SymbolTable.cpp" "C:/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/SymbolTable.cpp.obj"
+  "C:/Users/popca/PycharmProjects/FLCD/lab2/finite_automata/implementation/FiniteAutomata.cpp" "C:/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj"
+  "C:/Users/popca/PycharmProjects/FLCD/lab2/main.cpp" "C:/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/main.cpp.obj"
+  "C:/Users/popca/PycharmProjects/FLCD/lab2/model/implementation/Token.cpp" "C:/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj"
+  "C:/Users/popca/PycharmProjects/FLCD/lab2/scanner/implementation/Scanner.cpp" "C:/Users/popca/PycharmProjects/FLCD/lab2/cmake-build-debug/CMakeFiles/fcld_lab2_final.dir/scanner/implementation/Scanner.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

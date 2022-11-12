@@ -6,3 +6,12 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+# This file
+./*
+
+# Exclude build files 
+../cmake-build-debug/*
+
+# Exclude CMakeLists
+../CMakeLists.txt
