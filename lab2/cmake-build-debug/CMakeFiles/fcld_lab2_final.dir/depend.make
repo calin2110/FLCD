@@ -16,7 +16,6 @@ CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp
 CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj: ../exception/NotYetImplementedException.h
 CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj: ../finite_automata/header/FiniteAutomata.h
 CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj: ../finite_automata/implementation/FiniteAutomata.cpp
-CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj: ../model/header/Transition.h
 
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../data_structure/header/HashTable.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../data_structure/header/PIF.h
@@ -27,7 +26,6 @@ CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../finite_automata/header/Identifie
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../finite_automata/header/IntegerConstantFA.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../model/header/Token.h
-CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../model/header/Transition.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../scanner/header/Scanner.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../test/TestFA.h
 
@@ -35,7 +33,6 @@ CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: ../finite_aut
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: ../finite_automata/header/IdentifierFA.h
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: ../finite_automata/header/IntegerConstantFA.h
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: ../model/header/Token.h
-CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: ../model/header/Transition.h
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: ../model/implementation/Token.cpp
 
 CMakeFiles/fcld_lab2_final.dir/scanner/implementation/Scanner.cpp.obj: ../data_structure/header/HashTable.h

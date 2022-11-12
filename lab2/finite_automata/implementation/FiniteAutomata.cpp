@@ -39,9 +39,9 @@ std::istream &operator>>(std::istream &is, FiniteAutomata &object) {
 
     int number_of_transitions;
     is >> number_of_transitions;
-    std::unordered_map<std::string, std::list<Transition>> transitions{};
+    std::unordered_map<std::string, std::unordered_map<char, std::list<std::string>>> transitions{};
     for (const std::string& state: states) {
-        transitions[state] = std::list<Transition>{};
+        transitions[state] = std::unordered_map<char, std::list<std::string>>();
     }
 
     for (int _ = 0; _ < number_of_transitions; _++) {
@@ -75,7 +75,12 @@ std::istream &operator>>(std::istream &is, FiniteAutomata &object) {
             );
         }
 
-        transitions[start_transition].emplace_back(start_transition, end_transition, value);
+        if (transitions[start_transition].find(value) ==
+                transitions[start_transition].end()) {
+            transitions[start_transition][value] = std::list<std::string>();
+        }
+
+        transitions[start_transition][value].push_back(end_transition);
     }
 
     int number_of_final_states;
@@ -110,10 +115,14 @@ void FiniteAutomata::print_states(std::ostream &os) {
 
 void FiniteAutomata::print_transitions(std::ostream &os) {
     os << "TRANSITIONS:\n";
-    for (const auto&
-            key_value_pair: transitions) {
-        for (const Transition& transition: key_value_pair.second) {
-            os << "d(" << transition.start_state << ", " << transition.value << ")= " << transition.end_state << "\n";
+    for (const auto& key_to_transitions: transitions) {
+        for (const auto& transition:
+                key_to_transitions.second) {
+            for (const std::string& value: transition.second) {
+                os << "d(" << key_to_transitions.first << ", ";
+                os << transition.first << ")= ";
+                os << value << "\n";
+            }
         }
     }
     os << "\n\n";
@@ -141,12 +150,10 @@ void FiniteAutomata::print_final_states(std::ostream &os) {
 
 bool FiniteAutomata::is_deterministic() {
     for (const auto& something: transitions) {
-        std::unordered_set<char> transition_values{};
-        for (const Transition& transition: something.second) {
-            if (transition_values.find(transition.value) != transition_values.end()) {
+        for (const auto& transition: something.second) {
+            if (transition.second.size() != 1) {
                 return false;
             }
-            transition_values.insert(transition.value);
         }
     }
     return true;
@@ -167,18 +174,12 @@ bool FiniteAutomata::is_sequence_accepted(const std::string &sequence) {
     std::string current_state = initial_state;
     int current_index = 0;
     while (current_index < sequence.length()) {
-        const std::list<Transition> current_transitions = transitions[current_state];
-        bool found = false;
-        for (const Transition& transition: current_transitions) {
-            if (transition.value == sequence[current_index]) {
-                current_state = transition.end_state;
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
+        char current_character = sequence[current_index];
+        std::unordered_map<char, std::list<std::string>> current_transitions = transitions[current_state];
+        if (current_transitions.find(current_character) == current_transitions.end()) {
             return false;
         }
+        current_state = current_transitions[current_character].front();
         current_index++;
     }
     return final_states.find(current_state) != final_states.end();

@@ -22,6 +22,5 @@ add_executable(fcld_lab2_final
         exception/FAFormatException.h
         finite_automata/header/IdentifierFA.h
         finite_automata/header/IntegerConstantFA.h
-        model/header/Transition.h
         test/TestFA.h
         )

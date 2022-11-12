@@ -40,6 +40,7 @@ void finite_automata() {
 int main() {
 //    finite_automata();
     TestFA::test_all();
+    std::cout << " all tests passed\n";
     finite_automata();
     return 0;
 }

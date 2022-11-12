@@ -125,9 +125,6 @@
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/header/Token.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
-		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/header/Transition.h">
-			<Option target="fcld_lab2_final"/>
-		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/implementation/Token.cpp">
 			<Option target="fcld_lab2_final"/>
 		</Unit>

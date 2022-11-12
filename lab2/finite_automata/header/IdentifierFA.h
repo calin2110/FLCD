@@ -11,26 +11,26 @@ public:
         states.insert("q");
 
         for (const std::string& state: states) {
-            transitions[state] = std::list<Transition>{};
+            transitions[state] = std::unordered_map<char, std::list<std::string>>();
         }
 
         for (char val = 'a'; val <= 'z'; val++) {
             alphabet.insert(val);
-            transitions["p"].emplace_back("p", "q", val);
-            transitions["q"].emplace_back("q", "q", val);
+            transitions["p"][val] = std::list<std::string>{"q"};
+            transitions["q"][val] = std::list<std::string>{"q"};
         }
         for (char val = 'A'; val <= 'Z'; val++) {
             alphabet.insert(val);
-            transitions["p"].emplace_back("p", "q", val);
-            transitions["q"].emplace_back("q", "q", val);
+            transitions["p"][val] = std::list<std::string>{"q"};
+            transitions["q"][val] = std::list<std::string>{"q"};
         }
         alphabet.insert('_');
-        transitions["p"].emplace_back("p", "q", '_');
-        transitions["q"].emplace_back("q", "q", '_');
+        transitions["p"]['_'] = std::list<std::string>{"q"};
+        transitions["q"]['_'] = std::list<std::string>{"q"};
 
         for (char val = '0'; val <= '9'; val++) {
             alphabet.insert(val);
-            transitions["q"].emplace_back("q", "q",val);
+            transitions["q"][val] = std::list<std::string>{"q"};
         }
 
         initial_state = "p";
