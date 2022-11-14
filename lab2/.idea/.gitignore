@@ -8,10 +8,10 @@
 /httpRequests/
 
 # This file
-./*
+/*
 
 # Exclude build files 
-../cmake-build-debug/*
+/../cmake-build-debug/*
 
 # Exclude CMakeLists
-../CMakeLists.txt
+/../CMakeLists.txt
