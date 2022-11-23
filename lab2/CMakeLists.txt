@@ -23,4 +23,4 @@ add_executable(fcld_lab2_final
         finite_automata/header/IdentifierFA.h
         finite_automata/header/IntegerConstantFA.h
         test/TestFA.h
-        )
+        grammar/implementation/Grammar.cpp grammar/header/Grammar.h model/header/Production.h model/implementation/Production.cpp exception/GrammarFormatException.h)

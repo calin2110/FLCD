@@ -33,7 +33,7 @@ std::list<std::string> Scanner::get_tokens(const std::string &filepath) {
     std::ifstream file(filepath);
     std::string word;
     std::unordered_set<char> separators{
-            '(', ')', '{', '}', ':', ';', '[', ']', '+', '-', '*', '/', '=', '<', '>', '&', '|'
+            '(', ')', '{', '}', ':', ';', '[', ']', '+', '-', '*', '/', '=', '<', '>', '&', '|', ','
     };
     std::unordered_set<char> look_ahead_separators{
             '+', '-', '*', '/', '=', '<', '>', '&', '|'

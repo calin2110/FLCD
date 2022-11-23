@@ -1,0 +1,137 @@
+30
+program
+stmt_list
+type
+array_type
+expression
+complete_type
+stmt
+simpl_stmt
+struct_stmt
+decl_stmt
+assign_stmt
+io_stmt
+var_decl_word
+identifier
+assign_operator
+simple_sign
+term
+composite_sign
+factor
+constant
+read_stmt
+write_stmt
+unless_stmt
+until_stmt
+for_stmt
+condition
+for_body
+forenum_stmt
+foreach_stmt
+relation
+42
+fun
+main
+(
+)
+:
+void
+{
+}
+boolean
+string
+int
+[
+]
+;
+def
+final
+=
++=
+-=
+*=
+/=
++
+-
+&&
+||
+*
+/
+%
+read()
+write()
+unless
+else
+until
+forenum
+in
+foreach
+<
+<=
+>
+>=
+!=
+==
+61
+program -> fun main ( ) : void { stmt_list }
+type -> boolean
+type -> string
+type -> int
+array_type -> type [ expression ]
+complete_type -> type
+complete_type -> array_type
+stmt_list -> stmt
+stmt_list -> stmt stmt_list
+stmt -> simpl_stmt
+stmt -> struct_stmt
+simpl_stmt -> decl_stmt
+simpl_stmt -> assign_stmt
+simpl_stmt -> io_stmt
+var_decl_word -> def
+var_decl_word -> final
+decl_stmt -> var_decl_word identifier : complete_type ;
+decl_stmt -> var_decl_word identifier : complete_type = expression ;
+assign_stmt -> identifier assign_operator expression ;
+assign_operator -> =
+assign_operator -> +=
+assign_operator -> -=
+assign_operator -> *=
+assign_operator -> /=
+expression -> expression simple_sign term
+expression -> term
+simple_sign -> +
+simple_sign -> -
+simple_sign -> &&
+simple_sign -> ||
+term -> term composite_sign factor
+term -> factor
+complete_sign -> *
+complete_sign -> /
+complete_sign -> %
+factor -> ( expression )
+factor -> identifier
+factor -> constant
+factor -> identifier [ expression ]
+io_stmt -> read_stmt
+io_stmt -> write_stmt
+read_stmt -> read ( identifier )
+write_stmt -> write ( expression )
+struct_stmt -> unless_stmt
+struct_stmt -> until_stmt
+struct_stmt -> for_stmt
+unless_stmt -> unless ( condition ) { stmt_list }
+unless_stmt -> unless ( condition ) { stmt_list } else { stmt_list }
+until_stmt -> until ( condition ) { stmt_list }
+for_stmt -> for_body [ stmt_list }
+for_body -> forenum_stmt
+for_body -> foreach_stmt
+forenum_stmt -> forenum ( identifier in expression )
+forenum_stmt -> forenum ( identifier in expression , expression )
+forenum_stmt -> forenum ( identifier in expression , expression , expression )
+relation -> <
+relation -> <=
+relation -> >
+relation -> >=
+relation -> !=
+relation -> ==
+program

@@ -250,6 +250,33 @@ finite_automata/implementation/FiniteAutomata.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.s
 .PHONY : finite_automata/implementation/FiniteAutomata.cpp.s
 
+grammar/implementation/Grammar.obj: grammar/implementation/Grammar.cpp.obj
+
+.PHONY : grammar/implementation/Grammar.obj
+
+# target to build an object file
+grammar/implementation/Grammar.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj
+.PHONY : grammar/implementation/Grammar.cpp.obj
+
+grammar/implementation/Grammar.i: grammar/implementation/Grammar.cpp.i
+
+.PHONY : grammar/implementation/Grammar.i
+
+# target to preprocess a source file
+grammar/implementation/Grammar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.i
+.PHONY : grammar/implementation/Grammar.cpp.i
+
+grammar/implementation/Grammar.s: grammar/implementation/Grammar.cpp.s
+
+.PHONY : grammar/implementation/Grammar.s
+
+# target to generate assembly for a file
+grammar/implementation/Grammar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.s
+.PHONY : grammar/implementation/Grammar.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -276,6 +303,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+model/implementation/Production.obj: model/implementation/Production.cpp.obj
+
+.PHONY : model/implementation/Production.obj
+
+# target to build an object file
+model/implementation/Production.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj
+.PHONY : model/implementation/Production.cpp.obj
+
+model/implementation/Production.i: model/implementation/Production.cpp.i
+
+.PHONY : model/implementation/Production.i
+
+# target to preprocess a source file
+model/implementation/Production.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.i
+.PHONY : model/implementation/Production.cpp.i
+
+model/implementation/Production.s: model/implementation/Production.cpp.s
+
+.PHONY : model/implementation/Production.s
+
+# target to generate assembly for a file
+model/implementation/Production.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.s
+.PHONY : model/implementation/Production.cpp.s
 
 model/implementation/Token.obj: model/implementation/Token.cpp.obj
 
@@ -352,9 +406,15 @@ help:
 	@echo ... finite_automata/implementation/FiniteAutomata.obj
 	@echo ... finite_automata/implementation/FiniteAutomata.i
 	@echo ... finite_automata/implementation/FiniteAutomata.s
+	@echo ... grammar/implementation/Grammar.obj
+	@echo ... grammar/implementation/Grammar.i
+	@echo ... grammar/implementation/Grammar.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... model/implementation/Production.obj
+	@echo ... model/implementation/Production.i
+	@echo ... model/implementation/Production.s
 	@echo ... model/implementation/Token.obj
 	@echo ... model/implementation/Token.i
 	@echo ... model/implementation/Token.s

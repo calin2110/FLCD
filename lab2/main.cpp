@@ -6,18 +6,19 @@
 #include "finite_automata/header/IdentifierFA.h"
 #include "finite_automata/header/IntegerConstantFA.h"
 #include "test/TestFA.h"
+#include "grammar/header/Grammar.h"
 
 void scan() {
     Scanner scanner{};
     try {
-        std::string filename_noext = "p1err"    ;
-        scanner.scan("token.in", "../programs/" + filename_noext + ".cln");
+        std::string filename_noext = "p3";
+        scanner.scan("token.in", "../files/programs/" + filename_noext + ".cln");
         scanner.write_pif_and_symbol_table(
-                "../output/pif/pif_" + filename_noext + ".out",
-                "../output/st/st_" + filename_noext + ".out"
+                "../files/output/pif/pif_" + filename_noext + ".out",
+                "../files/output/st/st_" + filename_noext + ".out"
         );
         std::cout << "Lexically correct\n";
-    } catch (LexicalException& lexicalException) {
+    } catch (LexicalException &lexicalException) {
         std::cout << "Lexical error\n";
         std::cout << lexicalException.what() << "\n";
     }
@@ -26,7 +27,7 @@ void scan() {
 
 void finite_automata() {
     FiniteAutomata fa{};
-    std::ifstream file("fa.in");
+    std::ifstream file("../files/finite_automata/fa.in");
     file >> fa;
     file.close();
     fa.print_states(std::cout);
@@ -37,11 +38,24 @@ void finite_automata() {
     fa.is_sequence_accepted("01");
 }
 
+void grammar() {
+    std::ifstream file("../files/grammar/g2.in");
+    Grammar grammar{};
+    file >> grammar;
+    grammar.print_nonterminals(std::cout);
+    grammar.print_terminals(std::cout);
+    grammar.print_productions(std::cout);
+    grammar.print_start_symbol(std::cout);
+    std::cout << grammar.is_grammar_context_free();
+}
+
 int main() {
+    grammar();
 //    finite_automata();
     TestFA::test_all();
     std::cout << " all tests passed\n";
-    finite_automata();
+//    finite_automata();
+    scan();
     return 0;
 }
 

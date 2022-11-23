@@ -166,6 +166,9 @@ bool FiniteAutomata::is_sequence_accepted(const std::string &sequence) {
                 " for non-deterministic FAs!"
         );
     }
+    if (final_states.find(initial_state) != final_states.end() && sequence.empty()) {
+        return true;
+    }
     for (const char& elem: sequence) {
         if (alphabet.find(elem) == alphabet.end()) {
             return false;

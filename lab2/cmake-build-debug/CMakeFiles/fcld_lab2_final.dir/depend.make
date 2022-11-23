@@ -17,6 +17,10 @@ CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp
 CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj: ../finite_automata/header/FiniteAutomata.h
 CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj: ../finite_automata/implementation/FiniteAutomata.cpp
 
+CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj: ../grammar/header/Grammar.h
+CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj: ../grammar/implementation/Grammar.cpp
+CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj: ../model/header/Production.h
+
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../data_structure/header/HashTable.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../data_structure/header/PIF.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../data_structure/header/SymbolTable.h
@@ -24,10 +28,16 @@ CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../exception/LexicalException.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../finite_automata/header/FiniteAutomata.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../finite_automata/header/IdentifierFA.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../finite_automata/header/IntegerConstantFA.h
+CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../grammar/header/Grammar.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../model/header/Production.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../model/header/Token.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../scanner/header/Scanner.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../test/TestFA.h
+
+CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj: ../exception/GrammarFormatException.h
+CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj: ../model/header/Production.h
+CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj: ../model/implementation/Production.cpp
 
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: ../finite_automata/header/FiniteAutomata.h
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: ../finite_automata/header/IdentifierFA.h
