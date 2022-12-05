@@ -77,6 +77,7 @@ include CMakeFiles/fcld_lab2_final.dir/progress.make
 include CMakeFiles/fcld_lab2_final.dir/flags.make
 
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fcld_lab2_final.dir/main.cpp.obj"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\main.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\main.cpp
@@ -90,6 +91,7 @@ CMakeFiles/fcld_lab2_final.dir/main.cpp.s: cmake_force
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\main.cpp -o CMakeFiles\fcld_lab2_final.dir\main.cpp.s
 
 CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/HashTable.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/HashTable.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
 CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/HashTable.cpp.obj: ../data_structure/implementation/HashTable.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/HashTable.cpp.obj"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\data_structure\implementation\HashTable.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\data_structure\implementation\HashTable.cpp
@@ -103,6 +105,7 @@ CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/HashTable.cpp.s: cm
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\data_structure\implementation\HashTable.cpp -o CMakeFiles\fcld_lab2_final.dir\data_structure\implementation\HashTable.cpp.s
 
 CMakeFiles/fcld_lab2_final.dir/scanner/implementation/Scanner.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/scanner/implementation/Scanner.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
 CMakeFiles/fcld_lab2_final.dir/scanner/implementation/Scanner.cpp.obj: ../scanner/implementation/Scanner.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fcld_lab2_final.dir/scanner/implementation/Scanner.cpp.obj"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\scanner\implementation\Scanner.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\scanner\implementation\Scanner.cpp
@@ -116,6 +119,7 @@ CMakeFiles/fcld_lab2_final.dir/scanner/implementation/Scanner.cpp.s: cmake_force
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\scanner\implementation\Scanner.cpp -o CMakeFiles\fcld_lab2_final.dir\scanner\implementation\Scanner.cpp.s
 
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj: ../model/implementation/Token.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.obj"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\model\implementation\Token.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\Token.cpp
@@ -129,6 +133,7 @@ CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.s: cmake_force
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\Token.cpp -o CMakeFiles\fcld_lab2_final.dir\model\implementation\Token.cpp.s
 
 CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/PIF.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/PIF.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
 CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/PIF.cpp.obj: ../data_structure/implementation/PIF.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/PIF.cpp.obj"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\data_structure\implementation\PIF.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\data_structure\implementation\PIF.cpp
@@ -142,6 +147,7 @@ CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/PIF.cpp.s: cmake_fo
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\data_structure\implementation\PIF.cpp -o CMakeFiles\fcld_lab2_final.dir\data_structure\implementation\PIF.cpp.s
 
 CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/SymbolTable.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/SymbolTable.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
 CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/SymbolTable.cpp.obj: ../data_structure/implementation/SymbolTable.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/SymbolTable.cpp.obj"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\data_structure\implementation\SymbolTable.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\data_structure\implementation\SymbolTable.cpp
@@ -155,6 +161,7 @@ CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/SymbolTable.cpp.s: 
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\data_structure\implementation\SymbolTable.cpp -o CMakeFiles\fcld_lab2_final.dir\data_structure\implementation\SymbolTable.cpp.s
 
 CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
 CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj: ../finite_automata/implementation/FiniteAutomata.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\finite_automata\implementation\FiniteAutomata.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\finite_automata\implementation\FiniteAutomata.cpp
@@ -168,6 +175,7 @@ CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\finite_automata\implementation\FiniteAutomata.cpp -o CMakeFiles\fcld_lab2_final.dir\finite_automata\implementation\FiniteAutomata.cpp.s
 
 CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
 CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj: ../grammar/implementation/Grammar.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\grammar\implementation\Grammar.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\grammar\implementation\Grammar.cpp
@@ -181,6 +189,7 @@ CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.s: cmake_force
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\grammar\implementation\Grammar.cpp -o CMakeFiles\fcld_lab2_final.dir\grammar\implementation\Grammar.cpp.s
 
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj: ../model/implementation/Production.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\model\implementation\Production.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\Production.cpp
@@ -193,6 +202,62 @@ CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.s"
 	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\Production.cpp -o CMakeFiles\fcld_lab2_final.dir\model\implementation\Production.cpp.s
 
+CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
+CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.obj: ../parser/implementation/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.obj"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\parser\implementation\Parser.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\parser\implementation\Parser.cpp
+
+CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.i"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\popca\PycharmProjects\FLCD\lab2\parser\implementation\Parser.cpp > CMakeFiles\fcld_lab2_final.dir\parser\implementation\Parser.cpp.i
+
+CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.s"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\parser\implementation\Parser.cpp -o CMakeFiles\fcld_lab2_final.dir\parser\implementation\Parser.cpp.s
+
+CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
+CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.obj: ../model/implementation/LR0Item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.obj"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\model\implementation\LR0Item.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\LR0Item.cpp
+
+CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.i"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\LR0Item.cpp > CMakeFiles\fcld_lab2_final.dir\model\implementation\LR0Item.cpp.i
+
+CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.s"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\LR0Item.cpp -o CMakeFiles\fcld_lab2_final.dir\model\implementation\LR0Item.cpp.s
+
+CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
+CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.obj: ../grammar/implementation/EnhancedCFGGrammar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.obj"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\grammar\implementation\EnhancedCFGGrammar.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\grammar\implementation\EnhancedCFGGrammar.cpp
+
+CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.i"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\popca\PycharmProjects\FLCD\lab2\grammar\implementation\EnhancedCFGGrammar.cpp > CMakeFiles\fcld_lab2_final.dir\grammar\implementation\EnhancedCFGGrammar.cpp.i
+
+CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.s"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\grammar\implementation\EnhancedCFGGrammar.cpp -o CMakeFiles\fcld_lab2_final.dir\grammar\implementation\EnhancedCFGGrammar.cpp.s
+
+CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.obj: CMakeFiles/fcld_lab2_final.dir/flags.make
+CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.obj: CMakeFiles/fcld_lab2_final.dir/includes_CXX.rsp
+CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.obj: ../model/implementation/State.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.obj"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\fcld_lab2_final.dir\model\implementation\State.cpp.obj -c C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\State.cpp
+
+CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.i"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\State.cpp > CMakeFiles\fcld_lab2_final.dir\model\implementation\State.cpp.i
+
+CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.s"
+	C:\Users\popca\Downloads\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\popca\PycharmProjects\FLCD\lab2\model\implementation\State.cpp -o CMakeFiles\fcld_lab2_final.dir\model\implementation\State.cpp.s
+
 # Object files for target fcld_lab2_final
 fcld_lab2_final_OBJECTS = \
 "CMakeFiles/fcld_lab2_final.dir/main.cpp.obj" \
@@ -203,7 +268,11 @@ fcld_lab2_final_OBJECTS = \
 "CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/SymbolTable.cpp.obj" \
 "CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj" \
 "CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj" \
-"CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj"
+"CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj" \
+"CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.obj" \
+"CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.obj" \
+"CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.obj" \
+"CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.obj"
 
 # External object files for target fcld_lab2_final
 fcld_lab2_final_EXTERNAL_OBJECTS =
@@ -217,11 +286,15 @@ fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/data_structure/implementatio
 fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.obj
 fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/grammar/implementation/Grammar.cpp.obj
 fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.obj
+fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.obj
+fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.obj
+fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.obj
+fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.obj
 fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/build.make
 fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/linklibs.rsp
 fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/objects1.rsp
 fcld_lab2_final.exe: CMakeFiles/fcld_lab2_final.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable fcld_lab2_final.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\popca\PycharmProjects\FLCD\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable fcld_lab2_final.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\fcld_lab2_final.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

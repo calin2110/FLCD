@@ -7,6 +7,7 @@
 #include "finite_automata/header/IntegerConstantFA.h"
 #include "test/TestFA.h"
 #include "grammar/header/Grammar.h"
+#include "parser/header/Parser.h"
 
 void scan() {
     Scanner scanner{};
@@ -49,13 +50,24 @@ void grammar() {
     std::cout << grammar.is_grammar_context_free();
 }
 
+void parser() {
+    std::ifstream file("testg.in");
+    Grammar grammar{};
+    file >> grammar;
+    EnhancedCFGGrammar enhancedCfgGrammar{grammar};
+
+    Parser parser(enhancedCfgGrammar);
+    parser.run();
+}
+
 int main() {
-    grammar();
+    parser();
+//    grammar();
 //    finite_automata();
-    TestFA::test_all();
-    std::cout << " all tests passed\n";
+//    TestFA::test_all();
+//    std::cout << " all tests passed\n";
 //    finite_automata();
-    scan();
+//    scan();
     return 0;
 }
 

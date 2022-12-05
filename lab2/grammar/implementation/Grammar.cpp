@@ -3,6 +3,7 @@
 //
 
 #include "../header/Grammar.h"
+#include "../../exception/GrammarFormatException.h"
 
 std::istream &operator>>(std::istream &is, Grammar& grammar) {
     int count_nonterminals;
@@ -11,6 +12,9 @@ std::istream &operator>>(std::istream &is, Grammar& grammar) {
     for (int _ = 0; _ < count_nonterminals; _++) {
         std::string nonterminal;
         is >> nonterminal;
+        if (nonterminals.find(nonterminal) != nonterminals.end()) {
+            throw GrammarFormatException("Nonterminal " + nonterminal + " already exists as nonterminal!");
+        }
         nonterminals.insert(nonterminal);
     }
 
@@ -20,6 +24,12 @@ std::istream &operator>>(std::istream &is, Grammar& grammar) {
     for (int _ = 0; _ < count_terminals; _++) {
         std::string terminal;
         is >> terminal;
+        if (nonterminals.find(terminal) != nonterminals.end()) {
+            throw GrammarFormatException("Terminal " + terminal + " already exists as nonterminal!");
+        }
+        if (terminals.find(terminal) != terminals.end()) {
+            throw GrammarFormatException("Terminal " + terminal + " already exists as terminal!");
+        }
         terminals.insert(terminal);
     }
 
@@ -38,7 +48,9 @@ std::istream &operator>>(std::istream &is, Grammar& grammar) {
 
     std::string start_symbol;
     is >> start_symbol;
-
+    if (nonterminals.find(start_symbol) == nonterminals.end()) {
+        throw GrammarFormatException("Starting symbol cannot be found as nonterminal!");
+    }
 
     grammar.terminals = terminals;
     grammar.nonterminals = nonterminals;
@@ -75,7 +87,7 @@ void Grammar::print_start_symbol(std::ostream &ostream) {
     ostream << "START SYMBOL: " << start_symbol << "\n";
 }
 
-bool Grammar::is_grammar_context_free() {
+bool Grammar::is_grammar_context_free() const{
     for (const Production& production: productions) {
         if (production.lhs.size() != 1) {
             return false;

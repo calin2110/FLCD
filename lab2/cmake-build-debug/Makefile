@@ -250,6 +250,33 @@ finite_automata/implementation/FiniteAutomata.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/finite_automata/implementation/FiniteAutomata.cpp.s
 .PHONY : finite_automata/implementation/FiniteAutomata.cpp.s
 
+grammar/implementation/EnhancedCFGGrammar.obj: grammar/implementation/EnhancedCFGGrammar.cpp.obj
+
+.PHONY : grammar/implementation/EnhancedCFGGrammar.obj
+
+# target to build an object file
+grammar/implementation/EnhancedCFGGrammar.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.obj
+.PHONY : grammar/implementation/EnhancedCFGGrammar.cpp.obj
+
+grammar/implementation/EnhancedCFGGrammar.i: grammar/implementation/EnhancedCFGGrammar.cpp.i
+
+.PHONY : grammar/implementation/EnhancedCFGGrammar.i
+
+# target to preprocess a source file
+grammar/implementation/EnhancedCFGGrammar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.i
+.PHONY : grammar/implementation/EnhancedCFGGrammar.cpp.i
+
+grammar/implementation/EnhancedCFGGrammar.s: grammar/implementation/EnhancedCFGGrammar.cpp.s
+
+.PHONY : grammar/implementation/EnhancedCFGGrammar.s
+
+# target to generate assembly for a file
+grammar/implementation/EnhancedCFGGrammar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/grammar/implementation/EnhancedCFGGrammar.cpp.s
+.PHONY : grammar/implementation/EnhancedCFGGrammar.cpp.s
+
 grammar/implementation/Grammar.obj: grammar/implementation/Grammar.cpp.obj
 
 .PHONY : grammar/implementation/Grammar.obj
@@ -304,6 +331,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/implementation/LR0Item.obj: model/implementation/LR0Item.cpp.obj
+
+.PHONY : model/implementation/LR0Item.obj
+
+# target to build an object file
+model/implementation/LR0Item.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.obj
+.PHONY : model/implementation/LR0Item.cpp.obj
+
+model/implementation/LR0Item.i: model/implementation/LR0Item.cpp.i
+
+.PHONY : model/implementation/LR0Item.i
+
+# target to preprocess a source file
+model/implementation/LR0Item.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.i
+.PHONY : model/implementation/LR0Item.cpp.i
+
+model/implementation/LR0Item.s: model/implementation/LR0Item.cpp.s
+
+.PHONY : model/implementation/LR0Item.s
+
+# target to generate assembly for a file
+model/implementation/LR0Item.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.s
+.PHONY : model/implementation/LR0Item.cpp.s
+
 model/implementation/Production.obj: model/implementation/Production.cpp.obj
 
 .PHONY : model/implementation/Production.obj
@@ -331,6 +385,33 @@ model/implementation/Production.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/Production.cpp.s
 .PHONY : model/implementation/Production.cpp.s
 
+model/implementation/State.obj: model/implementation/State.cpp.obj
+
+.PHONY : model/implementation/State.obj
+
+# target to build an object file
+model/implementation/State.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.obj
+.PHONY : model/implementation/State.cpp.obj
+
+model/implementation/State.i: model/implementation/State.cpp.i
+
+.PHONY : model/implementation/State.i
+
+# target to preprocess a source file
+model/implementation/State.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.i
+.PHONY : model/implementation/State.cpp.i
+
+model/implementation/State.s: model/implementation/State.cpp.s
+
+.PHONY : model/implementation/State.s
+
+# target to generate assembly for a file
+model/implementation/State.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/State.cpp.s
+.PHONY : model/implementation/State.cpp.s
+
 model/implementation/Token.obj: model/implementation/Token.cpp.obj
 
 .PHONY : model/implementation/Token.obj
@@ -357,6 +438,33 @@ model/implementation/Token.s: model/implementation/Token.cpp.s
 model/implementation/Token.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/Token.cpp.s
 .PHONY : model/implementation/Token.cpp.s
+
+parser/implementation/Parser.obj: parser/implementation/Parser.cpp.obj
+
+.PHONY : parser/implementation/Parser.obj
+
+# target to build an object file
+parser/implementation/Parser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.obj
+.PHONY : parser/implementation/Parser.cpp.obj
+
+parser/implementation/Parser.i: parser/implementation/Parser.cpp.i
+
+.PHONY : parser/implementation/Parser.i
+
+# target to preprocess a source file
+parser/implementation/Parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.i
+.PHONY : parser/implementation/Parser.cpp.i
+
+parser/implementation/Parser.s: parser/implementation/Parser.cpp.s
+
+.PHONY : parser/implementation/Parser.s
+
+# target to generate assembly for a file
+parser/implementation/Parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.s
+.PHONY : parser/implementation/Parser.cpp.s
 
 scanner/implementation/Scanner.obj: scanner/implementation/Scanner.cpp.obj
 
@@ -406,18 +514,30 @@ help:
 	@echo ... finite_automata/implementation/FiniteAutomata.obj
 	@echo ... finite_automata/implementation/FiniteAutomata.i
 	@echo ... finite_automata/implementation/FiniteAutomata.s
+	@echo ... grammar/implementation/EnhancedCFGGrammar.obj
+	@echo ... grammar/implementation/EnhancedCFGGrammar.i
+	@echo ... grammar/implementation/EnhancedCFGGrammar.s
 	@echo ... grammar/implementation/Grammar.obj
 	@echo ... grammar/implementation/Grammar.i
 	@echo ... grammar/implementation/Grammar.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... model/implementation/LR0Item.obj
+	@echo ... model/implementation/LR0Item.i
+	@echo ... model/implementation/LR0Item.s
 	@echo ... model/implementation/Production.obj
 	@echo ... model/implementation/Production.i
 	@echo ... model/implementation/Production.s
+	@echo ... model/implementation/State.obj
+	@echo ... model/implementation/State.i
+	@echo ... model/implementation/State.s
 	@echo ... model/implementation/Token.obj
 	@echo ... model/implementation/Token.i
 	@echo ... model/implementation/Token.s
+	@echo ... parser/implementation/Parser.obj
+	@echo ... parser/implementation/Parser.i
+	@echo ... parser/implementation/Parser.s
 	@echo ... scanner/implementation/Scanner.obj
 	@echo ... scanner/implementation/Scanner.i
 	@echo ... scanner/implementation/Scanner.s
