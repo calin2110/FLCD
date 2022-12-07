@@ -18,6 +18,7 @@ private:
     std::unordered_set<State> create_col_can_LR0();
 
 public:
+    friend class TestParser;
     Parser(const EnhancedCFGGrammar& grammar);
     void run();
 };

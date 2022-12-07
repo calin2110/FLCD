@@ -36,21 +36,6 @@ Parser::Parser(const EnhancedCFGGrammar &grammar): grammar(grammar) {}
 
 void Parser::run() {
     auto states = create_col_can_LR0();
-//    for (auto state: states) {
-//        std::cout << "STATE:\n";
-//        for (auto c: state.items) {
-//            std::cout << c.start << "->" ;
-//            for (auto d: c.lhs) {
-//                std::cout << d << " ";
-//            }
-//            std::cout << ".";
-//            for (auto d: c.rhs) {
-//                std::cout << d << " ";
-//            }
-//            std::cout << "\n";
-//        }
-//        std::cout << "\n";
-//    }
 }
 
 State Parser::create_goto_LR0(

@@ -170,6 +170,7 @@ CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../model/header/Token.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../parser/header/Parser.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../scanner/header/Scanner.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../test/TestFA.h
+CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../test/TestParser.h
 
 CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.obj: C:/Boost/boost_1_73_0/boost/assert.hpp
 CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.obj: C:/Boost/boost_1_73_0/boost/config.hpp

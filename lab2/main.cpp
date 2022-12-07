@@ -8,6 +8,7 @@
 #include "test/TestFA.h"
 #include "grammar/header/Grammar.h"
 #include "parser/header/Parser.h"
+#include "test/TestParser.h"
 
 void scan() {
     Scanner scanner{};
@@ -60,8 +61,13 @@ void parser() {
     parser.run();
 }
 
+void test_parser_functions() {
+    TestParser::test_all();
+}
+
 int main() {
-    parser();
+//    parser();
+    test_parser_functions();
 //    grammar();
 //    finite_automata();
 //    TestFA::test_all();

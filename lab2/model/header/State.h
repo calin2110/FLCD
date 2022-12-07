@@ -19,10 +19,9 @@ struct std::hash<State>
 {
     std::size_t operator()(State const& state) const noexcept {
         std::size_t seed = 0;
-
         std::hash<LR0Item> item_hash{};
         for (const LR0Item& item: state.items) {
-            boost::hash_combine(seed, item_hash.operator()(item));
+            seed += item_hash.operator()(item);
         }
         return seed;
     }

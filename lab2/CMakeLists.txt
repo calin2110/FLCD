@@ -43,4 +43,4 @@ add_executable(fcld_lab2_final
         parser/implementation/Parser.cpp
         model/header/LR0Item.h
         model/implementation/LR0Item.cpp
-        grammar/header/EnhancedCFGGrammar.h grammar/implementation/EnhancedCFGGrammar.cpp model/header/State.h model/implementation/State.cpp)
+        grammar/header/EnhancedCFGGrammar.h grammar/implementation/EnhancedCFGGrammar.cpp model/header/State.h model/implementation/State.cpp test/TestParser.h)
