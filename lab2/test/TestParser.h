@@ -3,6 +3,7 @@
 //
 
 #pragma once
+
 #include <iostream>
 #include <fstream>
 #include "../grammar/header/EnhancedCFGGrammar.h"
@@ -12,22 +13,35 @@
 class TestParser {
 private:
     template<typename T>
-    static void assert_sets_are_equal(const std::unordered_set<T>& set1,
-                                      const std::unordered_set<T>& set2) {
+    static void assert_sets_are_equal(const std::unordered_set<T> &set1,
+                                      const std::unordered_set<T> &set2) {
         assert(set1.size() == set2.size());
-        for (const T& item: set1) {
+        for (const T &item: set1) {
             assert(set2.find(item) != set2.end());
         }
     }
 
-
-    static void test_closure() {
+    static Grammar read_grammar_from_file(const std::string &filepath) {
         std::ifstream file("../files/test/test_grammar.in");
         Grammar grammar{};
         file >> grammar;
         file.close();
-        EnhancedCFGGrammar enhancedCfgGrammar = EnhancedCFGGrammar(grammar);
-        Parser parser{enhancedCfgGrammar};
+        return grammar;
+    }
+
+    static EnhancedCFGGrammar create_enhanced_grammar_from_file(const std::string &filepath) {
+        Grammar grammar = read_grammar_from_file(filepath);
+        return EnhancedCFGGrammar{grammar};
+    }
+
+    static Parser create_parser_for_grammar(const std::string &grammar_filepath) {
+        EnhancedCFGGrammar enhancedCfgGrammar = create_enhanced_grammar_from_file(grammar_filepath);
+        return Parser(enhancedCfgGrammar);
+    }
+
+
+    static void test_closure() {
+        Parser parser = create_parser_for_grammar("../files/test/test_grammar.in");
         std::unordered_set<LR0Item> closure{};
         std::unordered_set<LR0Item> supposed_closure{};
 
@@ -128,12 +142,7 @@ private:
     }
 
     static void test_canonical_collection() {
-        std::ifstream file("../files/test/test_grammar.in");
-        Grammar grammar{};
-        file >> grammar;
-        file.close();
-        EnhancedCFGGrammar enhancedCfgGrammar = EnhancedCFGGrammar(grammar);
-        Parser parser{enhancedCfgGrammar};
+        Parser parser = create_parser_for_grammar("../files/test/test_grammar.in");
 
         std::unordered_set<State> canonical_collection = parser.create_col_can_LR0();
         std::unordered_set<State> supposed_canonical_collection =

@@ -4,6 +4,8 @@
 
 #include "../header/Parser.h"
 
+#include <utility>
+
 
 std::unordered_set<LR0Item> Parser::create_closure_LR0(const std::unordered_set<LR0Item>& analysis_items) {
     std::unordered_set<LR0Item> closure{};
@@ -15,7 +17,7 @@ std::unordered_set<LR0Item> Parser::create_closure_LR0(const std::unordered_set<
         std::unordered_set<LR0Item> items_to_add = std::unordered_set<LR0Item>{};
         for (const LR0Item& item: closure) {
             if (!item.rhs.empty() && grammar.nonterminals.find(item.rhs.front()) != grammar.nonterminals.end()) {
-                std::list<Production> matching_productions = grammar.productions.find(item.rhs.front())->second;
+                std::list<Production> matching_productions = grammar.productions[item.rhs.front()];
                 for (const Production& prod: matching_productions) {
                     LR0Item lrItm = LR0Item(item.rhs.front(), std::list<std::string>{}, prod.rhs);
                     if (closure.find(lrItm) == closure.end()) {
@@ -32,7 +34,7 @@ std::unordered_set<LR0Item> Parser::create_closure_LR0(const std::unordered_set<
     return closure;
 }
 
-Parser::Parser(const EnhancedCFGGrammar &grammar): grammar(grammar) {}
+Parser::Parser(EnhancedCFGGrammar grammar): grammar(std::move(grammar)) {}
 
 void Parser::run() {
     auto states = create_col_can_LR0();
@@ -54,7 +56,7 @@ State Parser::create_goto_LR0(
 
 std::unordered_set<State> Parser::create_col_can_LR0() {
     std::unordered_set<State> states{};
-    const Production& starting_production = grammar.productions.find(grammar.start_symbol)->second.front();
+    const Production& starting_production = grammar.productions[grammar.start_symbol].front();
     LR0Item lr0Item = LR0Item(grammar.start_symbol, std::list<std::string>{}, starting_production.rhs);
     states.insert(State(create_closure_LR0(std::unordered_set<LR0Item>{lr0Item})));
     const std::unordered_set<std::string> elements = grammar.get_terminals_and_nonterminals();
