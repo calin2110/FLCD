@@ -66,8 +66,8 @@ void test_parser_functions() {
 }
 
 int main() {
-//    parser();
-    test_parser_functions();
+    parser();
+//    test_parser_functions();
 //    grammar();
 //    finite_automata();
 //    TestFA::test_all();
