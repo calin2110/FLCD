@@ -7,37 +7,17 @@
 #include <iostream>
 #include <regex>
 
-std::unordered_set<std::string> Scanner::get_reserved_words(const std::string &filepath) {
-    std::ifstream file(filepath);
-    std::string reserved_word;
-    std::unordered_set<std::string> res_words{};
-    while (file >> reserved_word) {
-        res_words.insert(reserved_word);
-    }
-    file.close();
-    return res_words;
-}
-
-void Scanner::scan(const std::string& reserved_words_filepath,
-                   const std::string& code_filepath) {
-    reserved_words = get_reserved_words(reserved_words_filepath);
+std::pair<PIF, SymbolTable> Scanner::scan(const std::string& code_filepath) {
+    std::pair<PIF, SymbolTable> result{};
+//    reserved_words = get_reserved_words(reserved_words_filepath);
     std::list<std::string> tokens = get_tokens(code_filepath);
-    classify_all_tokens(tokens);
-}
-
-Scanner::Scanner(): symbolTable(), pif() {
-
+    classify_all_tokens(tokens, result.first, result.second);
+    return result;
 }
 
 std::list<std::string> Scanner::get_tokens(const std::string &filepath) {
     std::ifstream file(filepath);
     std::string word;
-    std::unordered_set<char> separators{
-            '(', ')', '{', '}', ':', ';', '[', ']', '+', '-', '*', '/', '=', '<', '>', '&', '|', ','
-    };
-    std::unordered_set<char> look_ahead_separators{
-            '+', '-', '*', '/', '=', '<', '>', '&', '|'
-    };
     std::list<std::string> tokens{};
 
     while (file >> word) {
@@ -93,7 +73,11 @@ TokenType Scanner::classify_token(const std::string &token) {
     throw LexicalException("Token " + token + " cannot be classified!");
 }
 
-void Scanner::classify_all_tokens(const std::list<std::string> &tokens) {
+void Scanner::classify_all_tokens(
+        const std::list<std::string> &tokens,
+        PIF& pif,
+        SymbolTable& symbolTable
+) {
     for (const std::string &token: tokens) {
         TokenType type = classify_token(token);
         int position;
@@ -124,7 +108,12 @@ void Scanner::classify_all_tokens(const std::list<std::string> &tokens) {
     }
 }
 
-void Scanner::write_pif_and_symbol_table(const std::string &pif_filepath, const std::string &st_filepath) {
+void Scanner::write_pif_and_symbol_table(
+        const std::string &pif_filepath,
+        const PIF& pif,
+        const std::string &st_filepath,
+        const SymbolTable& symbolTable
+    ) {
     std::ofstream pif_file(pif_filepath);
     pif_file << pif;
     pif_file.close();
@@ -132,4 +121,11 @@ void Scanner::write_pif_and_symbol_table(const std::string &pif_filepath, const 
     std::ofstream st_file(st_filepath);
     st_file << symbolTable;
     st_file.close();
+}
+
+Scanner::Scanner(std::unordered_set<std::string> reserved_words,
+                 std::unordered_set<char> separators,
+                 std::unordered_set<char> look_ahead_separators): reserved_words(std::move(reserved_words)),
+                    separators(std::move(separators)), look_ahead_separators(std::move(look_ahead_separators)){
+
 }

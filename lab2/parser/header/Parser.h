@@ -8,7 +8,9 @@
 #include "../../grammar/header/Grammar.h"
 #include "../../grammar/header/EnhancedCFGGrammar.h"
 #include "../../model/header/State.h"
-
+#include "../../data_structure/header/ActionTable.h"
+#include "../../syntax_tree/header/SyntaxTree.h"
+#include <queue>
 
 class Parser {
 private:
@@ -16,9 +18,11 @@ private:
     std::unordered_set<LR0Item> create_closure_LR0(const std::unordered_set<LR0Item>& analysis_items);
     State create_goto_LR0(const State& state, const std::string& element);
     std::unordered_set<State> create_col_can_LR0();
+    ActionTable create_action_table(const std::unordered_set<State>& states);
+    std::list<Production> run_algorithm(std::deque<std::string>& input_queue, ActionTable& action_table);
 
 public:
     friend class TestParser;
     Parser(EnhancedCFGGrammar grammar);
-    void run();
+    SyntaxTree run(std::deque<std::string>& input_queue);
 };

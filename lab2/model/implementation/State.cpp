@@ -23,3 +23,16 @@ State::State(const std::unordered_set<LR0Item>& items) {
 bool State::empty() const {
     return items.empty();
 }
+
+std::ostream &operator<<(std::ostream &os, const State &object) {
+    os << "State: ";
+    for (const LR0Item& item: object.items) {
+        os << item << " ";
+    }
+    os << "\n";
+    return os;
+}
+
+State::State() {
+
+}

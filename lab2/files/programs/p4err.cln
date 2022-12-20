@@ -1,0 +1,5 @@
+fun main(): void {
+    unless(1) {
+        write(69);
+    }
+}

@@ -11,8 +11,8 @@
 
 class Production {
 public:
-    const std::list<std::string> lhs;
-    const std::list<std::string> rhs;
+    std::list<std::string> lhs;
+    std::list<std::string> rhs;
     Production(std::list<std::string> lhs, std::list<std::string> rhs);
     static Production read_from_line(
             const std::string& line,

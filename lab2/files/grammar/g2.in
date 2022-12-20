@@ -1,8 +1,6 @@
-28
+26
 program
-stmt_list
 type
-array_type
 expression
 complete_type
 stmt
@@ -73,16 +71,12 @@ foreach
 !=
 ==
 ,
-61
-program -> fun main ( ) : void { stmt_list }
+44
+program -> fun main ( ) : void { stmt }
 type -> boolean
 type -> string
 type -> int
-array_type -> type [ expression ]
 complete_type -> type
-complete_type -> array_type
-stmt_list -> stmt
-stmt_list -> stmt stmt_list
 stmt -> simpl_stmt
 stmt -> struct_stmt
 simpl_stmt -> decl_stmt
@@ -90,45 +84,32 @@ simpl_stmt -> assign_stmt
 simpl_stmt -> io_stmt
 var_decl_word -> def
 var_decl_word -> final
-decl_stmt -> var_decl_word ID : complete_type ;
-decl_stmt -> var_decl_word ID : complete_type = expression ;
+decl_stmt -> var_decl_word ID : type ;
+decl_stmt -> var_decl_word ID : type = expression ;
 assign_stmt -> ID assign_operator expression ;
 assign_operator -> =
 assign_operator -> +=
 assign_operator -> -=
 assign_operator -> *=
 assign_operator -> /=
-expression -> expression simple_sign term
-expression -> term
+expression -> ID simple_sign term
 simple_sign -> +
 simple_sign -> -
 simple_sign -> &&
 simple_sign -> ||
-term -> term composite_sign factor
 term -> factor
 composite_sign -> *
-composite_sign -> /
 composite_sign -> %
-factor -> ( expression )
+composite_sign -> /
 factor -> ID
 factor -> CONST
-factor -> ID [ expression ]
 io_stmt -> read_stmt
 io_stmt -> write_stmt
-read_stmt -> read ( ID )
-write_stmt -> write ( expression )
+read_stmt -> read ( ID ) ;
+write_stmt -> write ( CONST ) ;
 struct_stmt -> unless_stmt
 struct_stmt -> until_stmt
-struct_stmt -> for_stmt
-unless_stmt -> unless ( condition ) { stmt_list }
-unless_stmt -> unless ( condition ) { stmt_list } else { stmt_list }
-until_stmt -> until ( condition ) { stmt_list }
-for_stmt -> for_body [ stmt_list }
-for_body -> forenum_stmt
-for_body -> foreach_stmt
-forenum_stmt -> forenum ( ID in expression )
-forenum_stmt -> forenum ( ID in expression , expression )
-forenum_stmt -> forenum ( ID in expression , expression , expression )
+unless_stmt -> unless ( condition ) { stmt }
 relation -> <
 relation -> <=
 relation -> >

@@ -23,28 +23,28 @@ typedef struct Node {
 
 class HashTable {
 private:
-    // int representing the capacity of the hash table
+    // int representing the capacity of the hash parsing_tree
     int quotient;
     // Node** representing an array of linked lists (Node*) of capacity quotient
     Node** hash_table;
-    // int representing the position we're currently at in the hash table
+    // int representing the position we're currently at in the hash parsing_tree
     int current_position;
-    // int representing the number of the elements currently in the hash table
+    // int representing the number of the elements currently in the hash parsing_tree
     int size;
     // double representing the max load factor which we accept
     double max_load_factor;
 
 public:
     /*
-     * Given a quotient and a max_load_factor, we initialise the symbol table
+     * Given a quotient and a max_load_factor, we initialise the symbol parsing_tree
      *
-     * @param quotient:         int representing the max capacity of the hash table
-     * @param max_load_factor:  double representing the max load factor allowed by the hash table
+     * @param quotient:         int representing the max capacity of the hash parsing_tree
+     * @param max_load_factor:  double representing the max load factor allowed by the hash parsing_tree
      */
     explicit HashTable(int quotient = 647, double max_load_factor = 0.75);
 
     /*
-     * Given a hash table, we want to assign it to the current hash table correctly
+     * Given a hash parsing_tree, we want to assign it to the current hash parsing_tree correctly
      * so that both can be destructed without any memory errors
      * (this is actually needed in order to not have any memory leaks)
      */
@@ -52,10 +52,10 @@ public:
 
     /*
      * Given a symbol, which is either a std::string, int or bool condensed into an std::any,
-     * we are trying to add it into the hash table
+     * we are trying to add it into the hash parsing_tree
      *
-     * @param symbol:   std::any representing the symbol we want to add into the table
-     * @return:         if the symbol already exists in the table, we return it
+     * @param symbol:   std::any representing the symbol we want to add into the parsing_tree
+     * @return:         if the symbol already exists in the parsing_tree, we return it
      *                  otherwise, if it's of the right type, we add it to the beginning of the linked list of its hash
      *                  and we update the current_position and size
      *                  if the size is greater than max_load_factor of capacity, we resize our hash_table
@@ -66,9 +66,9 @@ public:
 
     /*
      * Given a symbol, which is either a std::string, int or bool condensed into an std::any,
-     * we are trying to search it into the hash table
+     * we are trying to search it into the hash parsing_tree
      *
-     * @param symbol:   std::any representing the symbol we want to add into the table
+     * @param symbol:   std::any representing the symbol we want to add into the parsing_tree
      * @return:         if we cannot find our symbol in the linked list of its hash, we return nullptr
      *                  otherwise, we return it
      */
@@ -78,10 +78,10 @@ public:
      * Given a hashtable, we want to output it to the ostream given
      * This is used to print the HashTable nicer to the file after using the scanning algorithm
      */
-    friend std::ostream &operator<<(std::ostream &os, HashTable& hashTable);
+    friend std::ostream &operator<<(std::ostream &os, const HashTable& hashTable);
 
     /*
-     * Given the symbol table, we deallocate all dynamically allocated memory
+     * Given the symbol parsing_tree, we deallocate all dynamically allocated memory
      */
     ~HashTable();
 
@@ -103,14 +103,14 @@ private:
     [[nodiscard]] unsigned int hash(const std::any& symbol) const;
 
     /*
-     * When the load factor of the hash table becomes greater than max_load_factor, we are creating a new hash table
+     * When the load factor of the hash parsing_tree becomes greater than max_load_factor, we are creating a new hash parsing_tree
      * with double the size and readd the elements we currently have
-     * then we delete the old hash table
+     * then we delete the old hash parsing_tree
      */
     void resize();
 
     /*
-     * We initialise the hash table by creating an array of Node* of size quotient
+     * We initialise the hash parsing_tree by creating an array of Node* of size quotient
      * and at each position we are putting nullptr
      */
     void initialise_hash_table();

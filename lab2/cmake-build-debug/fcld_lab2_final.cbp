@@ -82,28 +82,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/header/HashTable.h">
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/header/ActionTable.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
-		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/header/PIF.h">
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/header/HashTable.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/header/SymbolTable.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/implementation/ActionTable.cpp">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/implementation/HashTable.cpp">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
-		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/implementation/PIF.cpp">
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/implementation/SymbolTable.cpp">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
-		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/data_structure/implementation/SymbolTable.cpp">
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/exception/ConflictException.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/exception/FAFormatException.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/exception/GrammarFormatException.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/exception/LR0Exception.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/exception/LexicalException.h">
@@ -139,7 +145,13 @@
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/main.cpp">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/header/Actions.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/header/LR0Item.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/header/ParsingNode.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/header/Production.h">
@@ -151,7 +163,13 @@
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/header/Token.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/implementation/Actions.cpp">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/implementation/LR0Item.cpp">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/implementation/ParsingNode.cpp">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/model/implementation/Production.cpp">
@@ -169,10 +187,22 @@
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/parser/implementation/Parser.cpp">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/pif/header/PIF.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/pif/implementation/PIF.cpp">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/scanner/header/Scanner.h">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/scanner/implementation/Scanner.cpp">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/syntax_tree/header/SyntaxTree.h">
+			<Option target="fcld_lab2_final"/>
+		</Unit>
+		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/syntax_tree/implementation/SyntaxTree.cpp">
 			<Option target="fcld_lab2_final"/>
 		</Unit>
 		<Unit filename="C:/Users/popca/PycharmProjects/FLCD/lab2/test/TestFA.h">

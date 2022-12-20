@@ -12,9 +12,10 @@ private:
     HashTable table;
 
 public:
+    SymbolTable& operator=(const SymbolTable& other);
     SymbolTable();
     int add(const std::any& symbol);
-    friend std::ostream &operator<<(std::ostream &os, SymbolTable& object);
+    friend std::ostream &operator<<(std::ostream &os, const SymbolTable& object);
 };
 
 

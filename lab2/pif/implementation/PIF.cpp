@@ -13,9 +13,13 @@ void PIF::add_token(const std::string& name, const int position) {
     tokens.emplace_back(name, position);
 }
 
-std::ostream &operator<<(std::ostream &os, PIF &pif) {
+std::ostream &operator<<(std::ostream &os, const PIF &pif) {
     for (Token const &token: pif.tokens) {
         os << token.name << " " << token.position << "\n";
     }
     return os;
+}
+
+std::list<Token> PIF::get_tokens() const {
+    return tokens;
 }

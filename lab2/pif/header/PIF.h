@@ -18,9 +18,9 @@ private:
 
 public:
     PIF();
-
+    std::list<Token> get_tokens() const;
     void add_token(const std::string& name, const int position);
-    friend std::ostream &operator<<(std::ostream &os, PIF& pif);
+    friend std::ostream &operator<<(std::ostream &os, const PIF& pif);
 };
 
 

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.16)
 project(fcld_lab2_final)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -22,8 +22,8 @@ add_executable(fcld_lab2_final
         scanner/header/Scanner.h
         model/implementation/Token.cpp
         model/header/Token.h
-        data_structure/implementation/PIF.cpp
-        data_structure/header/PIF.h
+        pif/implementation/PIF.cpp
+        pif/header/PIF.h
         data_structure/implementation/SymbolTable.cpp
         data_structure/header/SymbolTable.h
         finite_automata/header/FiniteAutomata.h
@@ -43,4 +43,4 @@ add_executable(fcld_lab2_final
         parser/implementation/Parser.cpp
         model/header/LR0Item.h
         model/implementation/LR0Item.cpp
-        grammar/header/EnhancedCFGGrammar.h grammar/implementation/EnhancedCFGGrammar.cpp model/header/State.h model/implementation/State.cpp test/TestParser.h)
+        grammar/header/EnhancedCFGGrammar.h grammar/implementation/EnhancedCFGGrammar.cpp model/header/State.h model/implementation/State.cpp test/TestParser.h model/header/Actions.h model/implementation/Actions.cpp data_structure/header/ActionTable.h data_structure/implementation/ActionTable.cpp syntax_tree/header/SyntaxTree.h syntax_tree/implementation/SyntaxTree.cpp model/header/ParsingNode.h model/implementation/ParsingNode.cpp exception/LR0Exception.h exception/ConflictException.h)

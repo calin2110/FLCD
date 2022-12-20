@@ -142,6 +142,33 @@ fcld_lab2_final/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/build
 .PHONY : fcld_lab2_final/fast
 
+data_structure/implementation/ActionTable.obj: data_structure/implementation/ActionTable.cpp.obj
+
+.PHONY : data_structure/implementation/ActionTable.obj
+
+# target to build an object file
+data_structure/implementation/ActionTable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/ActionTable.cpp.obj
+.PHONY : data_structure/implementation/ActionTable.cpp.obj
+
+data_structure/implementation/ActionTable.i: data_structure/implementation/ActionTable.cpp.i
+
+.PHONY : data_structure/implementation/ActionTable.i
+
+# target to preprocess a source file
+data_structure/implementation/ActionTable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/ActionTable.cpp.i
+.PHONY : data_structure/implementation/ActionTable.cpp.i
+
+data_structure/implementation/ActionTable.s: data_structure/implementation/ActionTable.cpp.s
+
+.PHONY : data_structure/implementation/ActionTable.s
+
+# target to generate assembly for a file
+data_structure/implementation/ActionTable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/ActionTable.cpp.s
+.PHONY : data_structure/implementation/ActionTable.cpp.s
+
 data_structure/implementation/HashTable.obj: data_structure/implementation/HashTable.cpp.obj
 
 .PHONY : data_structure/implementation/HashTable.obj
@@ -168,33 +195,6 @@ data_structure/implementation/HashTable.s: data_structure/implementation/HashTab
 data_structure/implementation/HashTable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/HashTable.cpp.s
 .PHONY : data_structure/implementation/HashTable.cpp.s
-
-data_structure/implementation/PIF.obj: data_structure/implementation/PIF.cpp.obj
-
-.PHONY : data_structure/implementation/PIF.obj
-
-# target to build an object file
-data_structure/implementation/PIF.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/PIF.cpp.obj
-.PHONY : data_structure/implementation/PIF.cpp.obj
-
-data_structure/implementation/PIF.i: data_structure/implementation/PIF.cpp.i
-
-.PHONY : data_structure/implementation/PIF.i
-
-# target to preprocess a source file
-data_structure/implementation/PIF.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/PIF.cpp.i
-.PHONY : data_structure/implementation/PIF.cpp.i
-
-data_structure/implementation/PIF.s: data_structure/implementation/PIF.cpp.s
-
-.PHONY : data_structure/implementation/PIF.s
-
-# target to generate assembly for a file
-data_structure/implementation/PIF.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/data_structure/implementation/PIF.cpp.s
-.PHONY : data_structure/implementation/PIF.cpp.s
 
 data_structure/implementation/SymbolTable.obj: data_structure/implementation/SymbolTable.cpp.obj
 
@@ -331,6 +331,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/implementation/Actions.obj: model/implementation/Actions.cpp.obj
+
+.PHONY : model/implementation/Actions.obj
+
+# target to build an object file
+model/implementation/Actions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/Actions.cpp.obj
+.PHONY : model/implementation/Actions.cpp.obj
+
+model/implementation/Actions.i: model/implementation/Actions.cpp.i
+
+.PHONY : model/implementation/Actions.i
+
+# target to preprocess a source file
+model/implementation/Actions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/Actions.cpp.i
+.PHONY : model/implementation/Actions.cpp.i
+
+model/implementation/Actions.s: model/implementation/Actions.cpp.s
+
+.PHONY : model/implementation/Actions.s
+
+# target to generate assembly for a file
+model/implementation/Actions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/Actions.cpp.s
+.PHONY : model/implementation/Actions.cpp.s
+
 model/implementation/LR0Item.obj: model/implementation/LR0Item.cpp.obj
 
 .PHONY : model/implementation/LR0Item.obj
@@ -357,6 +384,33 @@ model/implementation/LR0Item.s: model/implementation/LR0Item.cpp.s
 model/implementation/LR0Item.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/LR0Item.cpp.s
 .PHONY : model/implementation/LR0Item.cpp.s
+
+model/implementation/ParsingNode.obj: model/implementation/ParsingNode.cpp.obj
+
+.PHONY : model/implementation/ParsingNode.obj
+
+# target to build an object file
+model/implementation/ParsingNode.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/ParsingNode.cpp.obj
+.PHONY : model/implementation/ParsingNode.cpp.obj
+
+model/implementation/ParsingNode.i: model/implementation/ParsingNode.cpp.i
+
+.PHONY : model/implementation/ParsingNode.i
+
+# target to preprocess a source file
+model/implementation/ParsingNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/ParsingNode.cpp.i
+.PHONY : model/implementation/ParsingNode.cpp.i
+
+model/implementation/ParsingNode.s: model/implementation/ParsingNode.cpp.s
+
+.PHONY : model/implementation/ParsingNode.s
+
+# target to generate assembly for a file
+model/implementation/ParsingNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/model/implementation/ParsingNode.cpp.s
+.PHONY : model/implementation/ParsingNode.cpp.s
 
 model/implementation/Production.obj: model/implementation/Production.cpp.obj
 
@@ -466,6 +520,33 @@ parser/implementation/Parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/parser/implementation/Parser.cpp.s
 .PHONY : parser/implementation/Parser.cpp.s
 
+pif/implementation/PIF.obj: pif/implementation/PIF.cpp.obj
+
+.PHONY : pif/implementation/PIF.obj
+
+# target to build an object file
+pif/implementation/PIF.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/pif/implementation/PIF.cpp.obj
+.PHONY : pif/implementation/PIF.cpp.obj
+
+pif/implementation/PIF.i: pif/implementation/PIF.cpp.i
+
+.PHONY : pif/implementation/PIF.i
+
+# target to preprocess a source file
+pif/implementation/PIF.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/pif/implementation/PIF.cpp.i
+.PHONY : pif/implementation/PIF.cpp.i
+
+pif/implementation/PIF.s: pif/implementation/PIF.cpp.s
+
+.PHONY : pif/implementation/PIF.s
+
+# target to generate assembly for a file
+pif/implementation/PIF.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/pif/implementation/PIF.cpp.s
+.PHONY : pif/implementation/PIF.cpp.s
+
 scanner/implementation/Scanner.obj: scanner/implementation/Scanner.cpp.obj
 
 .PHONY : scanner/implementation/Scanner.obj
@@ -493,6 +574,33 @@ scanner/implementation/Scanner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/scanner/implementation/Scanner.cpp.s
 .PHONY : scanner/implementation/Scanner.cpp.s
 
+syntax_tree/implementation/SyntaxTree.obj: syntax_tree/implementation/SyntaxTree.cpp.obj
+
+.PHONY : syntax_tree/implementation/SyntaxTree.obj
+
+# target to build an object file
+syntax_tree/implementation/SyntaxTree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/syntax_tree/implementation/SyntaxTree.cpp.obj
+.PHONY : syntax_tree/implementation/SyntaxTree.cpp.obj
+
+syntax_tree/implementation/SyntaxTree.i: syntax_tree/implementation/SyntaxTree.cpp.i
+
+.PHONY : syntax_tree/implementation/SyntaxTree.i
+
+# target to preprocess a source file
+syntax_tree/implementation/SyntaxTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/syntax_tree/implementation/SyntaxTree.cpp.i
+.PHONY : syntax_tree/implementation/SyntaxTree.cpp.i
+
+syntax_tree/implementation/SyntaxTree.s: syntax_tree/implementation/SyntaxTree.cpp.s
+
+.PHONY : syntax_tree/implementation/SyntaxTree.s
+
+# target to generate assembly for a file
+syntax_tree/implementation/SyntaxTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fcld_lab2_final.dir\build.make CMakeFiles/fcld_lab2_final.dir/syntax_tree/implementation/SyntaxTree.cpp.s
+.PHONY : syntax_tree/implementation/SyntaxTree.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -502,12 +610,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... fcld_lab2_final
+	@echo ... data_structure/implementation/ActionTable.obj
+	@echo ... data_structure/implementation/ActionTable.i
+	@echo ... data_structure/implementation/ActionTable.s
 	@echo ... data_structure/implementation/HashTable.obj
 	@echo ... data_structure/implementation/HashTable.i
 	@echo ... data_structure/implementation/HashTable.s
-	@echo ... data_structure/implementation/PIF.obj
-	@echo ... data_structure/implementation/PIF.i
-	@echo ... data_structure/implementation/PIF.s
 	@echo ... data_structure/implementation/SymbolTable.obj
 	@echo ... data_structure/implementation/SymbolTable.i
 	@echo ... data_structure/implementation/SymbolTable.s
@@ -523,9 +631,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... model/implementation/Actions.obj
+	@echo ... model/implementation/Actions.i
+	@echo ... model/implementation/Actions.s
 	@echo ... model/implementation/LR0Item.obj
 	@echo ... model/implementation/LR0Item.i
 	@echo ... model/implementation/LR0Item.s
+	@echo ... model/implementation/ParsingNode.obj
+	@echo ... model/implementation/ParsingNode.i
+	@echo ... model/implementation/ParsingNode.s
 	@echo ... model/implementation/Production.obj
 	@echo ... model/implementation/Production.i
 	@echo ... model/implementation/Production.s
@@ -538,9 +652,15 @@ help:
 	@echo ... parser/implementation/Parser.obj
 	@echo ... parser/implementation/Parser.i
 	@echo ... parser/implementation/Parser.s
+	@echo ... pif/implementation/PIF.obj
+	@echo ... pif/implementation/PIF.i
+	@echo ... pif/implementation/PIF.s
 	@echo ... scanner/implementation/Scanner.obj
 	@echo ... scanner/implementation/Scanner.i
 	@echo ... scanner/implementation/Scanner.s
+	@echo ... syntax_tree/implementation/SyntaxTree.obj
+	@echo ... syntax_tree/implementation/SyntaxTree.i
+	@echo ... syntax_tree/implementation/SyntaxTree.s
 .PHONY : help
 
 

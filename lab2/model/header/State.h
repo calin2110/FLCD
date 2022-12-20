@@ -11,7 +11,9 @@ public:
     std::unordered_set<LR0Item> items;
     bool operator==(const State& other) const;
     State(const std::unordered_set<LR0Item>& items);
+    State();
     bool empty() const;
+    friend std::ostream &operator<<(std::ostream &os, const State& object);
 };
 
 template<>

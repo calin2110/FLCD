@@ -61,3 +61,17 @@ LR0Item::LR0Item(const std::string &start, const std::deque<std::string> &lhs, c
     this->lhs = lhs;
     this->rhs = rhs;
 }
+
+std::ostream &operator<<(std::ostream &os, const LR0Item &object) {
+    os << "[";
+    os << object.start << " -> ";
+    for (const std::string& item: object.lhs) {
+        os << item << " ";
+    }
+    os << " . ";
+    for (const std::string& item: object.rhs) {
+        os << item << " ";
+    }
+    os << "]";
+    return os;
+}

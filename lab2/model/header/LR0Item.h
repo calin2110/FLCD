@@ -5,6 +5,8 @@
 #pragma once
 #include <deque>
 #include <string>
+#include <list>
+#include <iostream>
 #include <boost/functional/hash.hpp>
 
 class LR0Item {
@@ -21,6 +23,7 @@ public:
     LR0Item shift_dot_right() const;
     bool operator==(const LR0Item& other) const;
     friend struct std::hash<LR0Item>;
+    friend std::ostream &operator<<(std::ostream &os, const LR0Item& object);
 };
 
 template<>

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cassert>
+#include <utility>
 #include "scanner/header/Scanner.h"
 #include "exception/LexicalException.h"
 #include "finite_automata/header/FiniteAutomata.h"
@@ -9,56 +10,91 @@
 #include "grammar/header/Grammar.h"
 #include "parser/header/Parser.h"
 #include "test/TestParser.h"
+#include "exception/LR0Exception.h"
+#include "exception/ConflictException.h"
 
-void scan() {
-    Scanner scanner{};
+std::unordered_set<std::string> read_reserved_words(const std::string &filepath) {
+    std::ifstream file(filepath);
+    std::string reserved_word;
+    std::unordered_set<std::string> res_words{};
+    while (file >> reserved_word) {
+        res_words.insert(reserved_word);
+    }
+    file.close();
+    return res_words;
+}
+
+std::unordered_set<char> read_separators(const std::string &filepath) {
+    std::ifstream file(filepath);
+    std::string separator_word;
+    std::unordered_set<char> separators{};
+    while (file >> separator_word) {
+        separators.insert(separator_word[0]);
+    }
+    std::cout << separators.size() << "\n";
+    file.close();
+    return separators;
+}
+
+PIF scan(const std::string& filepath) {
+    std::unordered_set<std::string> reserved_words = read_reserved_words("../files/scanner/token.in");
+    std::unordered_set<char> separators = read_separators("../files/scanner/separators.in");
+    std::unordered_set<char> look_ahead_separators = read_separators("../files/scanner/look_ahead_separators.in");
+    Scanner scanner{reserved_words, separators, look_ahead_separators};
+    PIF pif = scanner.scan(filepath).first;
+    std::cout << "Lexically correct\n";
+    return pif;
+}
+
+std::deque<std::string> transform_pif(const PIF& pif) {
+    std::list<Token> tokens = pif.get_tokens();
+    std::deque<std::string> input{};
+    std::for_each(tokens.begin(), tokens.end(), [&input](const Token& token){
+        input.push_back(token.name);
+    });
+    return input;
+}
+
+Grammar read_grammar_from_file(const std::string& filepath) {
+    Grammar grammar{};
+    std::ifstream file(filepath);
+    file >> grammar;
+    file.close();
+    return grammar;
+}
+
+SyntaxTree parse(std::deque<std::string> input, const Grammar& grammar) {
+    EnhancedCFGGrammar enhancedCfgGrammar{grammar};
+    Parser parser{enhancedCfgGrammar};
+    SyntaxTree tree = parser.run(input);
+    return tree;
+}
+
+void run(const std::string& program_filepath,
+         const std::string& grammar_filepath) {
     try {
-        std::string filename_noext = "p3";
-        scanner.scan("token.in", "../files/programs/" + filename_noext + ".cln");
-        scanner.write_pif_and_symbol_table(
-                "../files/output/pif/pif_" + filename_noext + ".out",
-                "../files/output/st/st_" + filename_noext + ".out"
-        );
-        std::cout << "Lexically correct\n";
+        PIF pif = scan(program_filepath);
+        std::deque<std::string> input = transform_pif(pif);
+        Grammar grammar = read_grammar_from_file(grammar_filepath);
+        SyntaxTree syntaxTree = parse(input, grammar);
+        std::cout << syntaxTree;
     } catch (LexicalException &lexicalException) {
         std::cout << "Lexical error\n";
         std::cout << lexicalException.what() << "\n";
+    } catch (LR0Exception &lr0Exception) {
+        std::cout << "Syntactic error\n";
+        std::cout << lr0Exception.what() << "\n";
+    } catch (ConflictException &conflictException) {
+        std::cout << "Grammar error - there are conflicts in the grammar\n";
+        std::cout << conflictException.what() << "\n";
     }
 }
 
-
-void finite_automata() {
-    FiniteAutomata fa{};
-    std::ifstream file("../files/finite_automata/fa.in");
-    file >> fa;
-    file.close();
-    fa.print_states(std::cout);
-    fa.print_alphabet(std::cout);
-    fa.print_initial_state(std::cout);
-    fa.print_final_states(std::cout);
-    fa.print_transitions(std::cout);
-    fa.is_sequence_accepted("01");
-}
-
-void grammar() {
-    std::ifstream file("../files/grammar/g2.in");
-    Grammar grammar{};
-    file >> grammar;
-    grammar.print_nonterminals(std::cout);
-    grammar.print_terminals(std::cout);
-    grammar.print_productions(std::cout);
-    grammar.print_start_symbol(std::cout);
-    std::cout << grammar.is_grammar_context_free();
-}
-
-void parser() {
-    std::ifstream file("testg.in");
-    Grammar grammar{};
-    file >> grammar;
-    EnhancedCFGGrammar enhancedCfgGrammar{grammar};
-
-    Parser parser(enhancedCfgGrammar);
-    parser.run();
+void run(std::deque<std::string> input,
+         const std::string& grammar_filepath) {
+    Grammar grammar = read_grammar_from_file(grammar_filepath);
+    SyntaxTree syntaxTree = parse(std::move(input), grammar);
+    std::cout << syntaxTree;
 }
 
 void test_parser_functions() {
@@ -66,14 +102,26 @@ void test_parser_functions() {
 }
 
 int main() {
-    parser();
-//    test_parser_functions();
-//    grammar();
-//    finite_automata();
-//    TestFA::test_all();
-//    std::cout << " all tests passed\n";
-//    finite_automata();
-//    scan();
+    std::cout << "Running the parser for simple input...\n";
+    run(
+            std::deque<std::string>({"a", "b", "b", "c"}),
+            "testg.in"
+    );
+    std::cout << "Finished running the parser for simple input\n";
+
+    std::cout << "Running the parser for mini-language program...\n";
+    run(
+            "../files/programs/p4.cln",
+            "../files/grammar/g2.in"
+    );
+    std::cout << "Finished running the parser for correct mini-language program\n";
+
+    std::cout << "Running the parser for errorful mini-language program...\n";
+    run(
+            "../files/programs/p4err.cln",
+            "../files/grammar/g2.in"
+    );
+    std::cout << "Finished running the parser for errorful mini-language program\n";
     return 0;
 }
 

@@ -63,7 +63,7 @@ unsigned int HashTable::hash(const std::any &symbol) const {
     if (symbol.type() == typeid(bool)) {
         return std::any_cast<bool>(symbol) % quotient;
     }
-    throw std::invalid_argument("Invalid type to add in the symbol table!");
+    throw std::invalid_argument("Invalid type to add in the symbol parsing_tree!");
 }
 
 HashTable::~HashTable() {
@@ -106,7 +106,7 @@ void HashTable::initialise_hash_table() {
     }
 }
 
-std::ostream &operator<<(std::ostream &os, HashTable &hashTable) {
+std::ostream &operator<<(std::ostream &os, const HashTable &hashTable) {
     for (int i = 0; i < hashTable.quotient; i++) {
         Node* current_node = hashTable.hash_table[i];
         while (current_node != nullptr) {
@@ -127,14 +127,14 @@ std::ostream &operator<<(std::ostream &os, HashTable &hashTable) {
     return os;
 }
 
-//HashTable::HashTable(HashTable &table) {
-//    this->quotient = table.quotient;
-//    this->current_position = table.current_position;
-//    this->size = table.size;
-//    this->max_load_factor = table.max_load_factor;
+//HashTable::HashTable(HashTable &parsing_tree) {
+//    this->quotient = parsing_tree.quotient;
+//    this->current_position = parsing_tree.current_position;
+//    this->size = parsing_tree.size;
+//    this->max_load_factor = parsing_tree.max_load_factor;
 //    this->initialise_hash_table();
-//    for (int i = 0; i < table.quotient; i++) {
-//        Node* current_node = table.hash_table[i];
+//    for (int i = 0; i < parsing_tree.quotient; i++) {
+//        Node* current_node = parsing_tree.hash_table[i];
 //        Node* previous_node = nullptr;
 //        while (current_node != nullptr) {
 //            Node* created_node = new Node;
