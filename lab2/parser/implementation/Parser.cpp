@@ -40,16 +40,18 @@ std::unordered_set<LR0Item> Parser::create_closure_LR0(const std::unordered_set<
 Parser::Parser(EnhancedCFGGrammar grammar) : grammar(std::move(grammar)) {}
 
 SyntaxTree Parser::run(std::deque<std::string> &input_queue) {
-    std::unordered_set<State> states = create_col_can_LR0();
-    ActionTable action_table = create_action_table(states);
+    std::pair<std::unordered_set<State>, ActionTable> state_action_table = create_col_can_LR0();
+
+    ActionTable action_table = state_action_table.second;
+    Production start_production = grammar.productions[grammar.start_symbol].front();
+    action_table.compute_actions(start_production);
     std::list<Production> output_band = run_algorithm(input_queue, action_table);
 
-    std::string start_point = grammar.productions[grammar.start_symbol].front().rhs.front();
+    std::string start_point = start_production.rhs.front();
     SyntaxTree parsingTree{start_point, grammar.nonterminals};
     for (const Production &prod: output_band) {
         parsingTree.parse_production(prod);
     }
-
     return parsingTree;
 }
 
@@ -67,46 +69,39 @@ State Parser::create_goto_LR0(
     return State(create_closure_LR0(goto_items));
 }
 
-std::unordered_set<State> Parser::create_col_can_LR0() {
+std::pair<std::unordered_set<State>, ActionTable> Parser::create_col_can_LR0() {
     std::unordered_set<State> states{};
+
     const Production &starting_production = grammar.productions[grammar.start_symbol].front();
     LR0Item lr0Item = LR0Item(grammar.start_symbol, std::list<std::string>{}, starting_production.rhs);
     states.insert(State(create_closure_LR0(std::unordered_set<LR0Item>{lr0Item})));
-    const std::unordered_set<std::string> elements = grammar.get_terminals_and_nonterminals();
+    const std::unordered_set<std::string> symbols = grammar.get_terminals_and_nonterminals();
 
-    bool changed;
+    ActionTable actionTable{};
+    std::unordered_set<State> parsed_states{};
+
+    std::unordered_set<State> states_to_add{};
     do {
-        changed = false;
-        std::unordered_set<State> states_to_add{};
-
+        states_to_add = std::unordered_set<State>{};
         for (const State &state: states) {
-            for (const std::string &element: elements) {
-                State current_go_to = create_goto_LR0(state, element);
-                if (!current_go_to.empty() && states.find(current_go_to) == states.end()) {
-                    states_to_add.insert(current_go_to);
-                    changed = true;
+            if (parsed_states.find(state) == parsed_states.end()) {
+                for (const std::string &element: symbols) {
+                    State current_go_to = create_goto_LR0(state, element);
+                    if (!current_go_to.empty()) {
+                        actionTable.add_go_to(state, element, current_go_to);
+                        if (states.find(current_go_to) == states.end()) {
+                            states_to_add.insert(current_go_to);
+                        }
+                    }
                 }
+                parsed_states.insert(state);
             }
         }
+
         states.insert(states_to_add.begin(), states_to_add.end());
-    } while (changed);
+    } while (!states_to_add.empty());
 
-    return states;
-}
-
-ActionTable Parser::create_action_table(const std::unordered_set<State> &states) {
-    ActionTable table = ActionTable(states);
-    std::unordered_set<std::string> alphabet = grammar.get_terminals_and_nonterminals();
-    for (const State &state: states) {
-        for (const std::string &element: alphabet) {
-            State go_to_state = create_goto_LR0(state, element);
-            if (!go_to_state.empty()) {
-                table.add_go_to(state, element, go_to_state);
-            }
-        }
-    }
-    table.compute_actions(grammar.productions[grammar.start_symbol].front());
-    return table;
+    return {states, actionTable};
 }
 
 std::list<Production> Parser::run_algorithm(std::deque<std::string> &input_deque, ActionTable &action_table) {

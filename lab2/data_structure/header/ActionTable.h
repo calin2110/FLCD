@@ -11,9 +11,10 @@ class ActionTable {
 private:
     std::unordered_map<State, std::unordered_map<std::string, State>> go_to_table;
     std::unordered_map<State, Action*> action_table;
+    void add_state(const State& state);
 
 public:
-    ActionTable(const std::unordered_set<State>& states);
+    ActionTable();
     void add_go_to(const State& state, const std::string& element, const State& go_to_state);
     void compute_actions(const Production& start_production);
     friend std::ostream &operator<<(std::ostream &os, ActionTable& object);

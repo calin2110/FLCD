@@ -288,9 +288,6 @@ CMakeFiles/fcld_lab2_final.dir/main.cpp.obj
  C:/Users/popca/PycharmProjects/FLCD/lab2/exception/ConflictException.h
  C:/Users/popca/PycharmProjects/FLCD/lab2/exception/LR0Exception.h
  C:/Users/popca/PycharmProjects/FLCD/lab2/exception/LexicalException.h
- C:/Users/popca/PycharmProjects/FLCD/lab2/finite_automata/header/FiniteAutomata.h
- C:/Users/popca/PycharmProjects/FLCD/lab2/finite_automata/header/IdentifierFA.h
- C:/Users/popca/PycharmProjects/FLCD/lab2/finite_automata/header/IntegerConstantFA.h
  C:/Users/popca/PycharmProjects/FLCD/lab2/grammar/header/EnhancedCFGGrammar.h
  C:/Users/popca/PycharmProjects/FLCD/lab2/grammar/header/Grammar.h
  C:/Users/popca/PycharmProjects/FLCD/lab2/main.cpp
@@ -304,7 +301,6 @@ CMakeFiles/fcld_lab2_final.dir/main.cpp.obj
  C:/Users/popca/PycharmProjects/FLCD/lab2/pif/header/PIF.h
  C:/Users/popca/PycharmProjects/FLCD/lab2/scanner/header/Scanner.h
  C:/Users/popca/PycharmProjects/FLCD/lab2/syntax_tree/header/SyntaxTree.h
- C:/Users/popca/PycharmProjects/FLCD/lab2/test/TestFA.h
  C:/Users/popca/PycharmProjects/FLCD/lab2/test/TestParser.h
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Actions.cpp.obj
  C:/Boost/boost_1_73_0/boost/assert.hpp

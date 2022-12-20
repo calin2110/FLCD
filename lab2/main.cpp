@@ -1,12 +1,7 @@
 #include <iostream>
-#include <cassert>
 #include <utility>
 #include "scanner/header/Scanner.h"
 #include "exception/LexicalException.h"
-#include "finite_automata/header/FiniteAutomata.h"
-#include "finite_automata/header/IdentifierFA.h"
-#include "finite_automata/header/IntegerConstantFA.h"
-#include "test/TestFA.h"
 #include "grammar/header/Grammar.h"
 #include "parser/header/Parser.h"
 #include "test/TestParser.h"
@@ -31,7 +26,6 @@ std::unordered_set<char> read_separators(const std::string &filepath) {
     while (file >> separator_word) {
         separators.insert(separator_word[0]);
     }
-    std::cout << separators.size() << "\n";
     file.close();
     return separators;
 }

@@ -17,8 +17,7 @@ private:
     EnhancedCFGGrammar grammar;
     std::unordered_set<LR0Item> create_closure_LR0(const std::unordered_set<LR0Item>& analysis_items);
     State create_goto_LR0(const State& state, const std::string& element);
-    std::unordered_set<State> create_col_can_LR0();
-    ActionTable create_action_table(const std::unordered_set<State>& states);
+    std::pair<std::unordered_set<State>, ActionTable> create_col_can_LR0();
     std::list<Production> run_algorithm(std::deque<std::string>& input_queue, ActionTable& action_table);
 
 public:

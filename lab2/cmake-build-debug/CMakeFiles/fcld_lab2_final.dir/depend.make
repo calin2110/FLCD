@@ -287,9 +287,6 @@ CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../data_structure/header/SymbolTabl
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../exception/ConflictException.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../exception/LR0Exception.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../exception/LexicalException.h
-CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../finite_automata/header/FiniteAutomata.h
-CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../finite_automata/header/IdentifierFA.h
-CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../finite_automata/header/IntegerConstantFA.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../grammar/header/EnhancedCFGGrammar.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../grammar/header/Grammar.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../main.cpp
@@ -303,7 +300,6 @@ CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../parser/header/Parser.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../pif/header/PIF.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../scanner/header/Scanner.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../syntax_tree/header/SyntaxTree.h
-CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../test/TestFA.h
 CMakeFiles/fcld_lab2_final.dir/main.cpp.obj: ../test/TestParser.h
 
 CMakeFiles/fcld_lab2_final.dir/model/implementation/Actions.cpp.obj: C:/Boost/boost_1_73_0/boost/assert.hpp

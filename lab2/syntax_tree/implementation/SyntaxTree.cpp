@@ -6,32 +6,29 @@
 
 #include <utility>
 
-ParsingNode SyntaxTree::find_rightest_terminal() {
-    for (auto it = parsing_tree.rbegin(); it != parsing_tree.rend(); it++) {
-        if (nonterminals.find(it->value) != nonterminals.end() && expanded_terminals.find(it->index) == expanded_terminals.end()) {
-            return *it;
-        }
-    }
-    return INVALID_NODE;
-}
-
 void SyntaxTree::parse_production(const Production& production) {
-    ParsingNode last = find_rightest_terminal();
-    if (last == INVALID_NODE) {
+    if (nonterminal_stack.empty()) {
         throw std::invalid_argument("no more terminals");
     }
+    ParsingNode last_nonterminal = nonterminal_stack.top();
+    nonterminal_stack.pop();
 
     int sibling_index = -1;
     for (const std::string& element: production.rhs) {
-        ParsingNode new_node{(int) parsing_tree.size() + 1, element, last.index, sibling_index};
+        ParsingNode new_node{(int) parsing_tree.size() + 1, element, last_nonterminal.index, sibling_index};
         parsing_tree.push_back(new_node);
+        if (nonterminals.find(element) != nonterminals.end()) {
+            nonterminal_stack.push(new_node);
+        }
         sibling_index = new_node.index;
     }
-    expanded_terminals.insert(last.index);
 }
 
 SyntaxTree::SyntaxTree(const std::string &start_point, std::unordered_set<std::string> nonterminals): nonterminals(std::move(nonterminals)) {
-    parsing_tree.emplace_back(parsing_tree.size() + 1, start_point, -1, -1);
+    nonterminal_stack = std::stack<ParsingNode>{};
+    ParsingNode starting_node{(int) parsing_tree.size() + 1, start_point, -1, -1};
+    nonterminal_stack.push(starting_node);
+    parsing_tree.push_back(starting_node);
 }
 
 std::ostream &operator<<(std::ostream &os, const SyntaxTree &object) {

@@ -7,16 +7,14 @@
 #include <utility>
 #include <algorithm>
 
-ActionTable::ActionTable(const std::unordered_set<State> &states) {
+ActionTable::ActionTable() {
     go_to_table = std::unordered_map<State, std::unordered_map<std::string, State>>{};
     action_table = std::unordered_map<State, Action *>{};
-    for (const State &state: states) {
-        go_to_table[state] = std::unordered_map<std::string, State>{};
-        action_table[state] = nullptr;
-    }
 }
 
 void ActionTable::add_go_to(const State &state, const std::string &element, const State &go_to_state) {
+    add_state(state);
+    add_state(go_to_state);
     go_to_table[state][element] = go_to_state;
 }
 
@@ -101,27 +99,29 @@ void ActionTable::compute_actions(const Production &start_production) {
 
 ActionTable::~ActionTable() {
     for (const auto& pair: action_table) {
-        switch (pair.second->type()) {
-            case ActionType::SHIFT:
-                delete dynamic_cast<ShiftAction*>(pair.second);
-                break;
-            case ActionType::REDUCE:
-                delete dynamic_cast<ReduceAction*>(pair.second);
-                break;
-            case ActionType::ERROR:
-                delete dynamic_cast<ErrorAction*>(pair.second);
-                break;
-            case ActionType::ACCEPT:
-                delete dynamic_cast<AcceptAction*>(pair.second);
-                break;
-            case ActionType::SHIFT_REDUCE_CONFLICT:
-                delete dynamic_cast<ShiftReduceConflict*>(pair.second);
-                break;
-            case ActionType::REDUCE_REDUCE_CONFLICT:
-                delete dynamic_cast<ReduceReduceConflict*>(pair.second);
-                break;
+        if (pair.second != nullptr) {
+            switch (pair.second->type()) {
+                case ActionType::SHIFT:
+                    delete dynamic_cast<ShiftAction *>(pair.second);
+                    break;
+                case ActionType::REDUCE:
+                    delete dynamic_cast<ReduceAction *>(pair.second);
+                    break;
+                case ActionType::ERROR:
+                    delete dynamic_cast<ErrorAction *>(pair.second);
+                    break;
+                case ActionType::ACCEPT:
+                    delete dynamic_cast<AcceptAction *>(pair.second);
+                    break;
+                case ActionType::SHIFT_REDUCE_CONFLICT:
+                    delete dynamic_cast<ShiftReduceConflict *>(pair.second);
+                    break;
+                case ActionType::REDUCE_REDUCE_CONFLICT:
+                    delete dynamic_cast<ReduceReduceConflict *>(pair.second);
+                    break;
+            }
+            action_table[pair.first] = nullptr;
         }
-        action_table[pair.first] = nullptr;
     }
 }
 
@@ -164,12 +164,12 @@ std::ostream& ActionTable::print_action(std::ostream &os, Action* action) {
 }
 
 void ActionTable::print_conflicts() {
-    for (const auto& x: action_table) {
-        if (x.second->type() == ActionType::SHIFT_REDUCE_CONFLICT) {
-            std::cout << *(ShiftReduceConflict*)x.second << "\n";
+    for (const auto& action: action_table) {
+        if (action.second->type() == ActionType::SHIFT_REDUCE_CONFLICT) {
+            std::cout <<  *dynamic_cast<ShiftReduceConflict*>(action.second) << "\n";
         }
-        if (x.second->type() == ActionType::REDUCE_REDUCE_CONFLICT) {
-            std::cout << *(ReduceReduceConflict*)x.second << "\n";
+        if (action.second->type() == ActionType::REDUCE_REDUCE_CONFLICT) {
+            std::cout << *dynamic_cast<ReduceReduceConflict*>(action.second) << "\n";
         }
     }
 }
@@ -184,4 +184,11 @@ bool ActionTable::is_goto_for_state(const State &state, const std::string &eleme
 
 State ActionTable::find_goto_for_state(const State &state, const std::string &element) {
     return go_to_table[state][element];
+}
+
+void ActionTable::add_state(const State &state) {
+    if (action_table.find(state) == action_table.end()) {
+        action_table[state] = nullptr;
+        go_to_table[state] = std::unordered_map<std::string, State>{};
+    }
 }

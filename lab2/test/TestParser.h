@@ -144,7 +144,7 @@ private:
     static void test_canonical_collection() {
         Parser parser = create_parser_for_grammar("../files/test/test_grammar.in");
 
-        std::unordered_set<State> canonical_collection = parser.create_col_can_LR0();
+        std::unordered_set<State> canonical_collection = parser.create_col_can_LR0().first;
         std::unordered_set<State> supposed_canonical_collection =
                 std::unordered_set<State>({
                     State(
