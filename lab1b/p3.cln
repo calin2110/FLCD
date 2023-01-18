@@ -1,13 +1,13 @@
 fun main(): void {
     def length: int;
-    write("len_is:");
+    write("len_is");
     read(length);
     
     def array: int[length];
     def i: int;
     
     forenum (i in length) {
-        read(int[i]);
+        read(array[i]);
     }
  
     def sum: int = 0;

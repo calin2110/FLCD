@@ -32,7 +32,7 @@ EnhancedCFGGrammar::EnhancedCFGGrammar(const Grammar &grammar) {
     productions[start_symbol].emplace_back(std::list<std::string>{start_symbol}, std::list<std::string>{grammar.start_symbol});
 }
 
-std::unordered_set<std::string> EnhancedCFGGrammar::get_terminals_and_nonterminals() const {
+std::unordered_set<std::string> EnhancedCFGGrammar::get_symbols() const {
     std::unordered_set<std::string> elements{};
     elements.insert(terminals.begin(), terminals.end());
     elements.insert(nonterminals.begin(), nonterminals.end());

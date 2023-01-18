@@ -102,6 +102,7 @@ int main() {
             "testg.in"
     );
     std::cout << "Finished running the parser for simple input\n";
+    std::cout << "\n";
 
     std::cout << "Running the parser for mini-language program...\n";
     run(
@@ -109,6 +110,7 @@ int main() {
             "../files/grammar/g2.in"
     );
     std::cout << "Finished running the parser for correct mini-language program\n";
+    std::cout << "\n";
 
     std::cout << "Running the parser for errorful mini-language program...\n";
     run(
@@ -116,6 +118,7 @@ int main() {
             "../files/grammar/g2.in"
     );
     std::cout << "Finished running the parser for errorful mini-language program\n";
+    std::cout << "\n";
     return 0;
 }
 

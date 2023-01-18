@@ -19,5 +19,5 @@ private:
 public:
     friend class Parser;
     EnhancedCFGGrammar(const Grammar& grammar);
-    std::unordered_set<std::string> get_terminals_and_nonterminals() const;
+    std::unordered_set<std::string> get_symbols() const;
 };

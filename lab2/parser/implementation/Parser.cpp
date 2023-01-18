@@ -75,7 +75,7 @@ std::pair<std::unordered_set<State>, ActionTable> Parser::create_col_can_LR0() {
     const Production &starting_production = grammar.productions[grammar.start_symbol].front();
     LR0Item lr0Item = LR0Item(grammar.start_symbol, std::list<std::string>{}, starting_production.rhs);
     states.insert(State(create_closure_LR0(std::unordered_set<LR0Item>{lr0Item})));
-    const std::unordered_set<std::string> symbols = grammar.get_terminals_and_nonterminals();
+    const std::unordered_set<std::string> symbols = grammar.get_symbols();
 
     ActionTable actionTable{};
     std::unordered_set<State> parsed_states{};

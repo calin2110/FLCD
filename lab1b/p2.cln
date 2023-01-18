@@ -16,6 +16,6 @@ fun main(): void {
         }
     }
 
-    write("gcd_is:");
+    write("gcd_is");
     write(a);
 }

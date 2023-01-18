@@ -1,0 +1,26 @@
+fun main(): void {
+    def a: int;
+    read(a);
+    def b: int;
+    read(b);
+    
+    def stop: boolean = false;
+    unless (a > 0) {
+        unless (b > 0) {
+            stop = true;
+            write("negative_numbers");
+        }
+    }
+    unless (stop) {
+        until (a == b) {
+            unless (a > b) {
+                b = b % a;
+            } else {
+                a = a % b;
+            }
+        }
+    }
+
+    write("gcd_is");
+    write(a);
+}

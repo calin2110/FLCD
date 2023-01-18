@@ -1,0 +1,259 @@
+%{
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <stdbool.h>
+
+	#define SEPARATOR -1
+	#define RESERVED_WORD -1
+	#define CONST 0
+	#define ID 1
+
+	#define INT_CONSTANT 1
+	#define STRING_CONSTANT 2
+	#define BOOL_CONSTANT 3
+	#define IDENTIFIER 4
+
+	int initial_size = 10;
+
+	typedef struct Symbol {
+		int code;
+		int position;
+		void* value;
+	} Symbol;
+
+	typedef struct SymbolTable {
+		int max_size;
+		int current_position;
+		Symbol* symbols;
+	} SymbolTable;
+
+	typedef struct PIFItem {
+		int position;
+		
+		// uses the constants defined with define
+		char* value;
+		struct PIFItem* next;
+	} PIFItem;
+
+
+	SymbolTable symbol_table;
+	PIFItem* head = NULL;
+	PIFItem* tail = NULL;
+
+	void add_pif_item(int position, char* value) {
+		PIFItem* item = (PIFItem*) malloc(sizeof(PIFItem));
+		item->position = position;
+
+		size_t len = strlen(value);
+		item->value = (char*) malloc((len + 1) * sizeof(char));
+		item->value[len] = 0;
+		item->next = NULL;
+		memcpy(item->value, value, len);
+
+		if (head == NULL) {
+			head = item;
+		} else {
+			tail->next = item;
+		}
+		tail = item;
+	}
+
+	void delete_pif() {
+		PIFItem* current_item = head;
+		while (current_item != NULL) {
+			PIFItem* saved_next = current_item->next;
+			free(current_item->value);
+			free(current_item);
+			current_item = saved_next;
+		}
+	}
+
+	void init_symbol_table() {
+		symbol_table.max_size = initial_size;
+		symbol_table.current_position = 0;
+		symbol_table.symbols = (Symbol*) malloc (symbol_table.max_size * sizeof(Symbol));
+	}
+
+	void resize_symbol_table() {
+		int new_max_size = 2 * symbol_table.max_size;
+		Symbol* new_symbols = (Symbol*) malloc (new_max_size * sizeof(Symbol));
+		memcpy(new_symbols, symbol_table.symbols, symbol_table.max_size * sizeof(Symbol));
+		free(symbol_table.symbols);
+		symbol_table.max_size = new_max_size;
+		symbol_table.symbols = new_symbols;
+	}
+	
+	int add_to_symbol_table(void* ptr, int code) {
+		if (symbol_table.current_position == symbol_table.max_size) {
+			resize_symbol_table();
+		}		
+		symbol_table.symbols[symbol_table.current_position].code = code;
+		symbol_table.symbols[symbol_table.current_position].position = symbol_table.current_position;
+		symbol_table.symbols[symbol_table.current_position].value = ptr;
+		symbol_table.current_position++;
+		return symbol_table.current_position - 1;
+	}
+
+    int add_int_const_to_symbol_table(int const_value) {
+		for (int i = 0; i < symbol_table.current_position; i++) {
+			if (symbol_table.symbols[i].code == INT_CONSTANT && const_value == *((int*) symbol_table.symbols[i].value)) {
+				return i;
+			}
+		}
+		int* value = (int*) malloc(sizeof(int));
+		*value = const_value;
+		return add_to_symbol_table(value, INT_CONSTANT);
+	}
+
+	int add_string_const_to_symbol_table(char* const_value) {
+		for (int i = 0; i < symbol_table.current_position; i++) {
+			if (symbol_table.symbols[i].code == STRING_CONSTANT && strcmp(*(char**)symbol_table.symbols[i].value, const_value) == 0) {
+				return i;
+			}
+		}
+		size_t len = strlen(const_value) + 1;
+		char** value = (char**) malloc(sizeof(char*));
+		*value = (char*) malloc(len * sizeof(char));
+		*(*value + len - 1) = 0;
+		memcpy(*value, const_value, len - 1);
+
+		return add_to_symbol_table(value, STRING_CONSTANT);
+	}
+
+	int add_bool_const_to_symbol_table(bool const_value) {
+		for (int i = 0; i < symbol_table.current_position; i++) {
+			if (symbol_table.symbols[i].code == BOOL_CONSTANT && *((bool*)symbol_table.symbols[i].value) == const_value) {
+				return i;
+			}
+		}
+		bool* value = (bool*) malloc(sizeof(bool));
+		*value = const_value;
+		return add_to_symbol_table(value, BOOL_CONSTANT);
+	}
+
+	int add_identifier_to_symbol_table(char* identifier) {
+		for (int i = 0; i < symbol_table.current_position; i++) {
+			if (symbol_table.symbols[i].code == IDENTIFIER && strcmp(identifier, *((char**)symbol_table.symbols[i].value)) == 0) {
+				return i;
+			}
+		}
+		size_t len = strlen(identifier) + 1;
+		char** value = (char**) malloc(sizeof(char*));
+		*value = (char*) malloc(len * sizeof(char));
+		*(*value + len - 1) = 0;
+		memcpy(*value, identifier, len - 1);
+		return add_to_symbol_table(value, IDENTIFIER);
+	}
+
+	void delete_symbol_table() {
+		for (int i = 0; i < symbol_table.current_position; i++) {
+			Symbol symbol = symbol_table.symbols[i];
+			if (symbol.code == STRING_CONSTANT || symbol.code == IDENTIFIER) {
+				char** ptr = (char**) symbol.value;
+				free(*ptr);
+				free(ptr);
+			} else {
+				if (symbol.code == BOOL_CONSTANT) {
+					bool* ptr = (bool*) symbol.value;
+					free(ptr);
+				} else {
+					int* ptr = (int*) symbol.value;
+					free(ptr);
+				}
+			}
+		}
+		free(symbol_table.symbols);
+	}
+
+
+
+%}
+
+%option noyywrap
+%option caseless
+
+DIGIT [0-9]
+NON_ZERO_DIGIT [1-9]
+INT_CONSTANT (0|^[+|-]{0,1}[1-9][0-9]*)
+STRING_CONSTANT \"[~|!|@|#|$|^|,|.|?|_|A-Z|a-z|0-9]*\"
+IDENTIFIER [A-Z|a-z|_][A-Z|a-z|_|0-9]*
+WRONG_IDENTIFIER [0-9][A-Z|a-z|_][A-Z|a-z|_|0-9]*
+WHITESPACE [ \t]+
+NEWLINE "\n"
+
+%%
+
+"fun"|"void"|"int"|"read"|"def"|"final"|"unless"|"else"|"write"|"until"|"forenum"|"foreach"|"in"|"string"|"boolean"|"main" {
+	 printf("%s - reserved word\n", yytext); 
+	 add_pif_item(-1, yytext);
+	 }
+"true"|"false" { 
+	printf("%s - bool constant\n", yytext); 
+	int position = add_bool_const_to_symbol_table(yytext);
+	add_pif_item(position, "CONST");	
+	}
+{IDENTIFIER} { 
+	printf("%s - identifier\n", yytext); 
+	int position = add_identifier_to_symbol_table(yytext);
+	add_pif_item(position, "ID");
+	}
+{WRONG_IDENTIFIER} {  printf("Error at token %s at line %d\n", yytext, yylineno); exit(-1); }
+{INT_CONSTANT} { 
+	printf("%s - int constant\n", yytext); 
+	int position = add_int_const_to_symbol_table(atoi(yytext));
+	add_pif_item(position, "CONST");	
+	}
+{STRING_CONSTANT} { 
+	printf("%s - string constant\n", yytext); 
+	int position = add_string_const_to_symbol_table(yytext);
+	add_pif_item(position, "CONST");
+	}
+"+="|"-="|"*="|"/="|"%="|"+"|"-"|"*"|"/"|"%"|">="|">"|"<="|"<"|"=="|"!="|"="|"&&"|"||"|"("|")"|"{"|"}"|":"|";"|"["|"]" {
+	 printf("%s - separator\n", yytext); 
+	 add_pif_item(-1, yytext);
+	 }
+{WHITESPACE} {}
+{NEWLINE} { ++yylineno; }
+
+%%
+
+int main(int argc, char** argv){ 
+	if (argc <= 1) {
+		printf("Please provide filename!\n");
+		exit(-1);
+	}
+	yyin = fopen(argv[1], "r");
+
+	FILE* st_file, *pif_file;
+	st_file = fopen("symbol_table.out", "w");
+	pif_file = fopen("pif.out", "w");
+	init_symbol_table();
+	yylex();
+	for (int i = 0; i < symbol_table.current_position; i++) {
+		if (symbol_table.symbols[i].code == INT_CONSTANT) {
+			fprintf(st_file, "%d %d\n", *((int*)symbol_table.symbols[i].value), symbol_table.symbols[i].position);
+		}
+		if (symbol_table.symbols[i].code == STRING_CONSTANT) {
+			fprintf(st_file, "%s %d\n", *((char**)symbol_table.symbols[i].value), symbol_table.symbols[i].position);
+		}
+		if (symbol_table.symbols[i].code == IDENTIFIER) {
+			fprintf(st_file, "%s %d\n", *((char**)symbol_table.symbols[i].value), symbol_table.symbols[i].position);
+		}
+		if (symbol_table.symbols[i].code == BOOL_CONSTANT) {
+			fprintf(st_file, "%s %d\n", *((bool*)symbol_table.symbols[i].value) ? "true" : "false", symbol_table.symbols[i].position);
+		}
+	}
+
+	PIFItem* current_pif = head;
+	while (current_pif != NULL) {
+		fprintf(pif_file, "%s %d\n", current_pif->value, current_pif->position);
+		current_pif = current_pif->next;
+	}
+
+	delete_symbol_table();
+	delete_pif();
+
+	fclose(st_file);
+	fclose(pif_file);
+	return 0;
+}

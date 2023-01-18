@@ -1,0 +1,82 @@
+%{
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include "y.tab.h"
+%}
+
+%option noyywrap
+%option caseless
+
+DIGIT [0-9]
+NON_ZERO_DIGIT [1-9]
+INT_CONSTANT (0|^[+|-]{0,1}[1-9][0-9]*)
+STRING_CONSTANT \"[~|!|@|#|$|^|,|.|?|_|A-Z|a-z|0-9]*\"
+IDENTIFIER [A-Z|a-z|_][A-Z|a-z|_|0-9]*
+WRONG_IDENTIFIER [0-9][A-Z|a-z|_][A-Z|a-z|_|0-9]*
+WHITESPACE [ \t]+
+NEWLINE "\n"
+
+%%
+
+"fun" { printf("%s - reserved word\n", yytext); return FUN; }
+"void" { printf("%s - reserved word\n", yytext); return VOID; }
+"int" { printf("%s - reserved word\n", yytext); return INT_TYPE; }
+"string" { printf("%s - reserved word\n", yytext); return STRING_TYPE; }
+"boolean" { printf("%s - reserved word\n", yytext); return BOOL_TYPE; }
+"read" { printf("%s - reserved word\n", yytext); return READ; }
+"write" { printf("%s - reserved word\n", yytext); return WRITE; }
+"def" { printf("%s - reserved word\n", yytext); return DEF; }
+"final" { printf("%s - reserved word\n", yytext); return FINAL; }
+"unless" { printf("%s - reserved word\n", yytext); return UNLESS; }
+"else" { printf("%s - reserved word\n", yytext); return ELSE; }
+"until" { printf("%s - reserved word\n", yytext); return UNTIL; }
+"forenum" { printf("%s - reserved word\n", yytext); return FORENUM; }
+"foreach" { printf("%s - reserved word\n", yytext); return FOREACH; }
+"in" { printf("%s - reserved word\n", yytext); return IN; }
+"main" { printf("%s - reserved word\n", yytext); return MAIN; }   
+
+"true"|"false" { printf("%s - bool constant\n", yytext); return CONST; }
+{IDENTIFIER} { printf("%s - identifier\n", yytext); return ID; }
+{WRONG_IDENTIFIER} {  printf("Error at token %s at line %d\n", yytext, yylineno); return -1; }
+{INT_CONSTANT} { printf("%s - int constant\n", yytext); return CONST; }
+{STRING_CONSTANT} { printf("%s - string constant\n", yytext); return CONST; }
+
+"+=" { printf("%s - assign operator\n", yytext); return PLUS_ASSIGN; }
+"-=" { printf("%s - assign operator\n", yytext); return MINUS_ASSIGN; }
+"*=" { printf("%s - assign operator\n", yytext); return MULTI_ASSIGN; }
+"/=" { printf("%s - assign operator\n", yytext); return DIV_ASSIGN; }
+"%=" { printf("%s - assign operator\n", yytext); return MOD_ASSIGN; }
+
+"+" { printf("%s - arithmetic operator\n", yytext); return PLUS; }
+"-" { printf("%s - arithmetic operator\n", yytext); return MINUS; }
+"*" { printf("%s - arithmetic operator\n", yytext); return MULTI; }
+"/" { printf("%s - arithmetic operator\n", yytext); return DIV; }
+"%" { printf("%s - arithmetic operator\n", yytext); return MOD; }
+
+">=" { printf("%s - relational operator\n", yytext); return GEQ; }
+">" { printf("%s - relational operator\n", yytext); return GT; }
+"<=" { printf("%s - relational operator\n", yytext); return LEQ; }
+"<" { printf("%s - relational operator\n", yytext); return LT; }
+"==" { printf("%s - relational operator\n", yytext); return EQ; }
+"!=" { printf("%s - relational operator\n", yytext); return NEQ; }
+
+"=" { printf("%s - assign operator\n", yytext); return ASSIGN; }
+
+"&&" { printf("%s - logical operator\n", yytext); return AND; }
+"||" { printf("%s - logical operator\n", yytext); return OR; }
+
+"(" { printf("%s - separator\n", yytext); return OPEN_BRACKET; }
+")" { printf("%s - separator\n", yytext); return CLOSE_BRACKET; }
+"{" { printf("%s - separator\n", yytext); return OPEN_BRACE; }
+"}" { printf("%s - separator\n", yytext); return CLOSE_BRACE; }
+":" { printf("%s - separator\n", yytext); return COLON; }
+";" { printf("%s - separator\n", yytext); return SEMICOLON; }
+"[" { printf("%s - separator\n", yytext); return OPEN_RIGHT_BRACKET; }
+"]" { printf("%s - separator\n", yytext); return CLOSE_RIGHT_BRACKET; }
+"," { printf("%s - separator\n", yytext); return COMMA; }
+
+{WHITESPACE} {}
+
+{NEWLINE} { ++yylineno; }
+
+%%
